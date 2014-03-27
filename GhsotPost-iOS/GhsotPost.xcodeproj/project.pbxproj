@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93A6EA4118E2562700D8663F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A6EA4018E2562700D8663F /* CoreData.framework */; };
 		93A6EA4418E2564300D8663F /* JMSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA4318E2564300D8663F /* JMSManagedObject.m */; };
+		93A6EA4D18E3179C00D8663F /* JMSGhostEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */; };
 		93D20AA218E1C5B100647F7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA118E1C5B100647F7C /* Foundation.framework */; };
 		93D20AA418E1C5B100647F7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA318E1C5B100647F7C /* CoreGraphics.framework */; };
 		93D20AA618E1C5B100647F7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA518E1C5B100647F7C /* UIKit.framework */; };
@@ -41,7 +42,10 @@
 		93A6EA4018E2562700D8663F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		93A6EA4218E2564300D8663F /* JMSManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSManagedObject.h; path = ../../Shared/JMSManagedObject.h; sourceTree = "<group>"; };
 		93A6EA4318E2564300D8663F /* JMSManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSManagedObject.m; path = ../../Shared/JMSManagedObject.m; sourceTree = "<group>"; };
-		93D20A9E18E1C5B100647F7C /* GhsotPost-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GhsotPost-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A6EA4B18E3179C00D8663F /* JMSGhostEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSGhostEntry.h; path = ../../Shared/JMSGhostEntry.h; sourceTree = "<group>"; };
+		93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSGhostEntry.m; path = ../../Shared/JMSGhostEntry.m; sourceTree = "<group>"; };
+		93A6EA4E18E4682800D8663F /* GhsotPost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GhsotPost-iOS.entitlements"; sourceTree = "<group>"; };
+		93D20A9E18E1C5B100647F7C /* GhsotPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhsotPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D20AA118E1C5B100647F7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93D20AA318E1C5B100647F7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		93D20AA518E1C5B100647F7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -103,7 +107,7 @@
 		93D20A9F18E1C5B100647F7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93D20A9E18E1C5B100647F7C /* GhsotPost-iOS.app */,
+				93D20A9E18E1C5B100647F7C /* GhsotPost.app */,
 				93D20ABF18E1C5B100647F7C /* GhsotPost-iOSTests.xctest */,
 			);
 			name = Products;
@@ -124,6 +128,7 @@
 		93D20AA718E1C5B100647F7C /* GhsotPost-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				93A6EA4E18E4682800D8663F /* GhsotPost-iOS.entitlements */,
 				93D20AB018E1C5B100647F7C /* JMSAppDelegate.h */,
 				93D20AB118E1C5B100647F7C /* JMSAppDelegate.m */,
 				93D20AB318E1C5B100647F7C /* Main.storyboard */,
@@ -169,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				93D20AD718E1C6F100647F7C /* GhostPostCoreDataModel.xcdatamodeld */,
+				93A6EA4B18E3179C00D8663F /* JMSGhostEntry.h */,
+				93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */,
 				93E0C7A318E1CBB900146D39 /* JMSManagedObjectContext.h */,
 				93E0C7A418E1CBB900146D39 /* JMSManagedObjectContext.m */,
 				93A6EA4218E2564300D8663F /* JMSManagedObject.h */,
@@ -180,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93D20A9D18E1C5B100647F7C /* GhsotPost-iOS */ = {
+		93D20A9D18E1C5B100647F7C /* GhsotPost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93D20AD018E1C5B100647F7C /* Build configuration list for PBXNativeTarget "GhsotPost-iOS" */;
+			buildConfigurationList = 93D20AD018E1C5B100647F7C /* Build configuration list for PBXNativeTarget "GhsotPost" */;
 			buildPhases = (
 				93D20A9A18E1C5B100647F7C /* Sources */,
 				93D20A9B18E1C5B100647F7C /* Frameworks */,
@@ -192,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = "GhsotPost-iOS";
+			name = GhsotPost;
 			productName = "GhsotPost-iOS";
-			productReference = 93D20A9E18E1C5B100647F7C /* GhsotPost-iOS.app */;
+			productReference = 93D20A9E18E1C5B100647F7C /* GhsotPost.app */;
 			productType = "com.apple.product-type.application";
 		};
 		93D20ABE18E1C5B100647F7C /* GhsotPost-iOSTests */ = {
@@ -225,12 +232,20 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = jsorge;
 				TargetAttributes = {
+					93D20A9D18E1C5B100647F7C = {
+						DevelopmentTeam = 49LQXRW3X4;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 					93D20ABE18E1C5B100647F7C = {
 						TestTargetID = 93D20A9D18E1C5B100647F7C;
 					};
 				};
 			};
-			buildConfigurationList = 93D20A9918E1C5B100647F7C /* Build configuration list for PBXProject "GhsotPost-iOS" */;
+			buildConfigurationList = 93D20A9918E1C5B100647F7C /* Build configuration list for PBXProject "GhsotPost" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,7 +258,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93D20A9D18E1C5B100647F7C /* GhsotPost-iOS */,
+				93D20A9D18E1C5B100647F7C /* GhsotPost */,
 				93D20ABE18E1C5B100647F7C /* GhsotPost-iOSTests */,
 			);
 		};
@@ -278,6 +293,7 @@
 				93D20AB818E1C5B100647F7C /* JMSViewController.m in Sources */,
 				93D20AAE18E1C5B100647F7C /* main.m in Sources */,
 				93E0C7A518E1CBB900146D39 /* JMSManagedObjectContext.m in Sources */,
+				93A6EA4D18E3179C00D8663F /* JMSGhostEntry.m in Sources */,
 				93A6EA4418E2564300D8663F /* JMSManagedObject.m in Sources */,
 				93D20AD918E1C6F100647F7C /* GhostPostCoreDataModel.xcdatamodeld in Sources */,
 				93D20AB218E1C5B100647F7C /* JMSAppDelegate.m in Sources */,
@@ -297,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		93D20AC518E1C5B100647F7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93D20A9D18E1C5B100647F7C /* GhsotPost-iOS */;
+			target = 93D20A9D18E1C5B100647F7C /* GhsotPost */;
 			targetProxy = 93D20AC418E1C5B100647F7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -405,10 +421,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GhsotPost-iOS/GhsotPost-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhsotPost-iOS/GhsotPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhsotPost-iOS/GhsotPost-iOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,10 +438,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GhsotPost-iOS/GhsotPost-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhsotPost-iOS/GhsotPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhsotPost-iOS/GhsotPost-iOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -469,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93D20A9918E1C5B100647F7C /* Build configuration list for PBXProject "GhsotPost-iOS" */ = {
+		93D20A9918E1C5B100647F7C /* Build configuration list for PBXProject "GhsotPost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93D20ACE18E1C5B100647F7C /* Debug */,
@@ -478,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93D20AD018E1C5B100647F7C /* Build configuration list for PBXNativeTarget "GhsotPost-iOS" */ = {
+		93D20AD018E1C5B100647F7C /* Build configuration list for PBXNativeTarget "GhsotPost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93D20AD118E1C5B100647F7C /* Debug */,

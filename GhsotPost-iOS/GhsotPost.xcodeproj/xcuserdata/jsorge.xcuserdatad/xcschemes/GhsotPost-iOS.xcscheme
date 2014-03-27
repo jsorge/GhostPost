@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
                BuildableName = "GhsotPost-iOS.app"
-               BlueprintName = "GhsotPost-iOS"
-               ReferencedContainer = "container:GhsotPost-iOS.xcodeproj">
+               BlueprintName = "GhsotPost"
+               ReferencedContainer = "container:GhsotPost.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "93D20ABE18E1C5B100647F7C"
                BuildableName = "GhsotPost-iOSTests.xctest"
                BlueprintName = "GhsotPost-iOSTests"
-               ReferencedContainer = "container:GhsotPost-iOS.xcodeproj">
+               ReferencedContainer = "container:GhsotPost.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost-iOS.app"
-            BlueprintName = "GhsotPost-iOS"
-            ReferencedContainer = "container:GhsotPost-iOS.xcodeproj">
+            BlueprintName = "GhsotPost"
+            ReferencedContainer = "container:GhsotPost.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost-iOS.app"
-            BlueprintName = "GhsotPost-iOS"
-            ReferencedContainer = "container:GhsotPost-iOS.xcodeproj">
+            BlueprintName = "GhsotPost"
+            ReferencedContainer = "container:GhsotPost.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost-iOS.app"
-            BlueprintName = "GhsotPost-iOS"
-            ReferencedContainer = "container:GhsotPost-iOS.xcodeproj">
+            BlueprintName = "GhsotPost"
+            ReferencedContainer = "container:GhsotPost.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

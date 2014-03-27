@@ -12,5 +12,7 @@
 
 #pragma mark - API
 + (instancetype)createContextWithStoreURL:(NSURL *)url options:(NSDictionary *)options;
++ (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
+- (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator;
 
 @end

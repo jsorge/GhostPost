@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GhsotPost-iOS.xcodeproj">
+      location = "self:GhsotPost.xcodeproj">
    </FileRef>
 </Workspace>

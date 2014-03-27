@@ -14,9 +14,7 @@
 + (instancetype)createContextWithStoreURL:(NSURL *)storeURL options:(NSDictionary *)options
 {
     NSMutableArray *models = [NSMutableArray array];
-    NSString *modelName = [self modelName];
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:modelName withExtension:@"momd"];
-    NSManagedObjectModel *firstModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    NSManagedObjectModel *firstModel = [self loadManagedObjectModel];
     [models addObject:firstModel];
     
     NSManagedObjectModel *finalModel = [NSManagedObjectModel modelByMergingModels:models];
@@ -41,10 +39,24 @@
     return context;
 }
 
-#pragma mark - Private
-+ (NSString *)modelName
++ (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
 {
-    return @"GhostPostCoreDataModel";
+    BOOL compatible = NO;
+    NSError *error;
+    
+    NSDictionary *sourceMetadata = [NSPersistentStoreCoordinator metadataForPersistentStoreOfType:nil
+                                                                                              URL:storeURL
+                                                                                            error:&error];
+    if (error) {
+        //TODO: Handle error
+        abort();
+    } else if (sourceMetadata != nil) {
+        NSManagedObjectModel *destinationModel = [self loadManagedObjectModel];
+        compatible = [destinationModel isConfiguration:nil
+                           compatibleWithStoreMetadata:sourceMetadata];
+    }
+    
+    return !compatible;
 }
 
 - (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator
@@ -54,6 +66,18 @@
         self.persistentStoreCoordinator = coordinator;
     }
     return self;
+}
+
+#pragma mark - Private
++ (NSString *)modelName
+{
+    return @"GhostPostCoreDataModel";
+}
+
++ (NSManagedObjectModel *)loadManagedObjectModel
+{
+    NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:[self modelName] withExtension:@"momd"];
+    return [[NSManagedObjectModel alloc] initWithContentsOfURL:bundleURL];
 }
 
 @end
