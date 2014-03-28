@@ -11,7 +11,7 @@
 @interface JMSManagedObjectContext : NSManagedObjectContext
 
 #pragma mark - API
-+ (instancetype)createContextWithStoreURL:(NSURL *)url options:(NSDictionary *)options;
++ (instancetype)createContextWithStoreURL:(NSURL *)storeURL options:(NSDictionary *)options;
 + (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
 - (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator;
 
