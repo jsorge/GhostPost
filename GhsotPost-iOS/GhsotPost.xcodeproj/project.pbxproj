@@ -10,6 +10,8 @@
 		93A6EA4118E2562700D8663F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A6EA4018E2562700D8663F /* CoreData.framework */; };
 		93A6EA4418E2564300D8663F /* JMSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA4318E2564300D8663F /* JMSManagedObject.m */; };
 		93A6EA4D18E3179C00D8663F /* JMSGhostEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */; };
+		93A6EA5118E46DBF00D8663F /* JMSSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5018E46DBF00D8663F /* JMSSettingsController.m */; };
+		93A6EA5418E52D9300D8663F /* JMSEntryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5318E52D9300D8663F /* JMSEntryStore.m */; };
 		93D20AA218E1C5B100647F7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA118E1C5B100647F7C /* Foundation.framework */; };
 		93D20AA418E1C5B100647F7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA318E1C5B100647F7C /* CoreGraphics.framework */; };
 		93D20AA618E1C5B100647F7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA518E1C5B100647F7C /* UIKit.framework */; };
@@ -17,7 +19,6 @@
 		93D20AAE18E1C5B100647F7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D20AAD18E1C5B100647F7C /* main.m */; };
 		93D20AB218E1C5B100647F7C /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D20AB118E1C5B100647F7C /* JMSAppDelegate.m */; };
 		93D20AB518E1C5B100647F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D20AB318E1C5B100647F7C /* Main.storyboard */; };
-		93D20AB818E1C5B100647F7C /* JMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D20AB718E1C5B100647F7C /* JMSViewController.m */; };
 		93D20ABA18E1C5B100647F7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D20AB918E1C5B100647F7C /* Images.xcassets */; };
 		93D20AC118E1C5B100647F7C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AC018E1C5B100647F7C /* XCTest.framework */; };
 		93D20AC218E1C5B100647F7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA118E1C5B100647F7C /* Foundation.framework */; };
@@ -45,6 +46,10 @@
 		93A6EA4B18E3179C00D8663F /* JMSGhostEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSGhostEntry.h; path = ../../Shared/JMSGhostEntry.h; sourceTree = "<group>"; };
 		93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSGhostEntry.m; path = ../../Shared/JMSGhostEntry.m; sourceTree = "<group>"; };
 		93A6EA4E18E4682800D8663F /* GhsotPost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GhsotPost-iOS.entitlements"; sourceTree = "<group>"; };
+		93A6EA4F18E46DBF00D8663F /* JMSSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSSettingsController.h; path = ../../Shared/JMSSettingsController.h; sourceTree = "<group>"; };
+		93A6EA5018E46DBF00D8663F /* JMSSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSSettingsController.m; path = ../../Shared/JMSSettingsController.m; sourceTree = "<group>"; };
+		93A6EA5218E52D9300D8663F /* JMSEntryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSEntryStore.h; path = ../../Shared/JMSEntryStore.h; sourceTree = "<group>"; };
+		93A6EA5318E52D9300D8663F /* JMSEntryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEntryStore.m; path = ../../Shared/JMSEntryStore.m; sourceTree = "<group>"; };
 		93D20A9E18E1C5B100647F7C /* GhsotPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhsotPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D20AA118E1C5B100647F7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93D20AA318E1C5B100647F7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,8 +61,6 @@
 		93D20AB018E1C5B100647F7C /* JMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
 		93D20AB118E1C5B100647F7C /* JMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
 		93D20AB418E1C5B100647F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93D20AB618E1C5B100647F7C /* JMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSViewController.h; sourceTree = "<group>"; };
-		93D20AB718E1C5B100647F7C /* JMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSViewController.m; sourceTree = "<group>"; };
 		93D20AB918E1C5B100647F7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		93D20ABF18E1C5B100647F7C /* GhsotPost-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GhsotPost-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D20AC018E1C5B100647F7C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -128,12 +131,9 @@
 		93D20AA718E1C5B100647F7C /* GhsotPost-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				93A6EA4E18E4682800D8663F /* GhsotPost-iOS.entitlements */,
 				93D20AB018E1C5B100647F7C /* JMSAppDelegate.h */,
 				93D20AB118E1C5B100647F7C /* JMSAppDelegate.m */,
 				93D20AB318E1C5B100647F7C /* Main.storyboard */,
-				93D20AB618E1C5B100647F7C /* JMSViewController.h */,
-				93D20AB718E1C5B100647F7C /* JMSViewController.m */,
 				93D20AB918E1C5B100647F7C /* Images.xcassets */,
 				93D20AD618E1C6DB00647F7C /* Model */,
 				93D20AA818E1C5B100647F7C /* Supporting Files */,
@@ -144,6 +144,9 @@
 		93D20AA818E1C5B100647F7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93A6EA4F18E46DBF00D8663F /* JMSSettingsController.h */,
+				93A6EA5018E46DBF00D8663F /* JMSSettingsController.m */,
+				93A6EA4E18E4682800D8663F /* GhsotPost-iOS.entitlements */,
 				93D20AA918E1C5B100647F7C /* GhsotPost-iOS-Info.plist */,
 				93D20AAA18E1C5B100647F7C /* InfoPlist.strings */,
 				93D20AAD18E1C5B100647F7C /* main.m */,
@@ -176,6 +179,8 @@
 				93D20AD718E1C6F100647F7C /* GhostPostCoreDataModel.xcdatamodeld */,
 				93A6EA4B18E3179C00D8663F /* JMSGhostEntry.h */,
 				93A6EA4C18E3179C00D8663F /* JMSGhostEntry.m */,
+				93A6EA5218E52D9300D8663F /* JMSEntryStore.h */,
+				93A6EA5318E52D9300D8663F /* JMSEntryStore.m */,
 				93E0C7A318E1CBB900146D39 /* JMSManagedObjectContext.h */,
 				93E0C7A418E1CBB900146D39 /* JMSManagedObjectContext.m */,
 				93A6EA4218E2564300D8663F /* JMSManagedObject.h */,
@@ -290,9 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93D20AB818E1C5B100647F7C /* JMSViewController.m in Sources */,
+				93A6EA5118E46DBF00D8663F /* JMSSettingsController.m in Sources */,
 				93D20AAE18E1C5B100647F7C /* main.m in Sources */,
 				93E0C7A518E1CBB900146D39 /* JMSManagedObjectContext.m in Sources */,
+				93A6EA5418E52D9300D8663F /* JMSEntryStore.m in Sources */,
 				93A6EA4D18E3179C00D8663F /* JMSGhostEntry.m in Sources */,
 				93A6EA4418E2564300D8663F /* JMSManagedObject.m in Sources */,
 				93D20AD918E1C6F100647F7C /* GhostPostCoreDataModel.xcdatamodeld in Sources */,

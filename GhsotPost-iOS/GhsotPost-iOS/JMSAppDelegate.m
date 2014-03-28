@@ -7,12 +7,19 @@
 //
 
 #import "JMSAppDelegate.h"
+#import "JMSManagedObjectContext.h"
+#import "JMSEntryStore.h"
 
 @implementation JMSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    if ([JMSManagedObjectContext storeNeedsMigrationAtURL:[JMSEntryStore storeURL]]) {
+        //TODO: perform migration
+        //See Goracke's Core Data potpurri talk
+    }
+    
+    
     return YES;
 }
 							
