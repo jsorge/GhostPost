@@ -11,7 +11,8 @@
 #import "JMSManagedObjectContext.h"
 #import "JMSGhostEntry.h"
 
-static NSString *const savedPostCellKey = @"savedPostCell";
+static NSString *const SavedPostCellKey = @"ruid_SavedPostCell";
+static NSString *const EditDraftSegueKey = @"seg_EditDraftSegue";
 
 @interface JMSEntryListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic)IBOutlet UITableView *tableView;
@@ -49,6 +50,21 @@ static NSString *const savedPostCellKey = @"savedPostCell";
 }
 
 #pragma mark - IBActions
+- (IBAction)settingsButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)addButtonTapped:(id)sender
+{
+    
+}
+
+- (IBAction)actionButtonTapped:(id)sender
+{
+    
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -58,10 +74,10 @@ static NSString *const savedPostCellKey = @"savedPostCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:savedPostCellKey];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:SavedPostCellKey];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:savedPostCellKey];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SavedPostCellKey];
     }
     
     JMSGhostEntry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];

@@ -13,6 +13,7 @@
 		93A6EA5118E46DBF00D8663F /* JMSSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5018E46DBF00D8663F /* JMSSettingsController.m */; };
 		93A6EA5418E52D9300D8663F /* JMSEntryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5318E52D9300D8663F /* JMSEntryStore.m */; };
 		93A6EA5718E5336800D8663F /* JMSEntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5618E5336800D8663F /* JMSEntryListViewController.m */; };
+		93A6EA5B18E5BBB400D8663F /* JMSEditDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6EA5A18E5BBB400D8663F /* JMSEditDraftViewController.m */; };
 		93D20AA218E1C5B100647F7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA118E1C5B100647F7C /* Foundation.framework */; };
 		93D20AA418E1C5B100647F7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA318E1C5B100647F7C /* CoreGraphics.framework */; };
 		93D20AA618E1C5B100647F7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D20AA518E1C5B100647F7C /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		93A6EA5318E52D9300D8663F /* JMSEntryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEntryStore.m; path = ../../Shared/JMSEntryStore.m; sourceTree = "<group>"; };
 		93A6EA5518E5336800D8663F /* JMSEntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSEntryListViewController.h; path = "View Controllers/JMSEntryListViewController.h"; sourceTree = "<group>"; };
 		93A6EA5618E5336800D8663F /* JMSEntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEntryListViewController.m; path = "View Controllers/JMSEntryListViewController.m"; sourceTree = "<group>"; };
+		93A6EA5918E5BBB400D8663F /* JMSEditDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSEditDraftViewController.h; path = "View Controllers/JMSEditDraftViewController.h"; sourceTree = "<group>"; };
+		93A6EA5A18E5BBB400D8663F /* JMSEditDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEditDraftViewController.m; path = "View Controllers/JMSEditDraftViewController.m"; sourceTree = "<group>"; };
 		93D20A9E18E1C5B100647F7C /* GhsotPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhsotPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D20AA118E1C5B100647F7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		93D20AA318E1C5B100647F7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93A6EA5C18E5BBBB00D8663F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93A6EA5518E5336800D8663F /* JMSEntryListViewController.h */,
+				93A6EA5618E5336800D8663F /* JMSEntryListViewController.m */,
+				93A6EA5918E5BBB400D8663F /* JMSEditDraftViewController.h */,
+				93A6EA5A18E5BBB400D8663F /* JMSEditDraftViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		93D20A9518E1C5B100647F7C = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +151,9 @@
 				93D20AB018E1C5B100647F7C /* JMSAppDelegate.h */,
 				93D20AB118E1C5B100647F7C /* JMSAppDelegate.m */,
 				93D20AB318E1C5B100647F7C /* Main.storyboard */,
-				93A6EA5518E5336800D8663F /* JMSEntryListViewController.h */,
-				93A6EA5618E5336800D8663F /* JMSEntryListViewController.m */,
-				93D20AB918E1C5B100647F7C /* Images.xcassets */,
+				93A6EA5C18E5BBBB00D8663F /* View Controllers */,
 				93D20AD618E1C6DB00647F7C /* Model */,
+				93D20AB918E1C5B100647F7C /* Images.xcassets */,
 				93D20AA818E1C5B100647F7C /* Supporting Files */,
 			);
 			path = "GhsotPost-iOS";
@@ -309,6 +322,7 @@
 				93A6EA4418E2564300D8663F /* JMSManagedObject.m in Sources */,
 				93D20AD918E1C6F100647F7C /* GhostPostCoreDataModel.xcdatamodeld in Sources */,
 				93D20AB218E1C5B100647F7C /* JMSAppDelegate.m in Sources */,
+				93A6EA5B18E5BBB400D8663F /* JMSEditDraftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
