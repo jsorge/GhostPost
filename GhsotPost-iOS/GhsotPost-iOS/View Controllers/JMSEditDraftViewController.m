@@ -8,11 +8,22 @@
 
 #import "JMSEditDraftViewController.h"
 #import "JMSGhostEntry.h"
+#import "JMSEntryPreviewViewController.h"
 
-@interface JMSEditDraftViewController () <UIActionSheetDelegate>
+@interface JMSEditDraftViewController () <UIActionSheetDelegate, JMSEntryPreviewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+@property (strong, nonatomic)UIToolbar *accessoryToolbar;
 @end
+
+static NSString *const PreviewSegue = @"seg_PreviewEntry";
+
+/*
+ TODO: Send entry to server
+ TODO: Post title
+ TODO: Post tags
+ TODO: Handle images
+ */
 
 @implementation JMSEditDraftViewController
 #pragma mark - Lifecycle
@@ -20,6 +31,34 @@
 {
     [super viewDidLoad];
     self.textView.text = self.entry.markdownText;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:PreviewSegue]) {
+        UINavigationController *navigation = segue.destinationViewController;
+        JMSEntryPreviewViewController *destination = (JMSEntryPreviewViewController *)navigation.topViewController;
+        destination.entry = self.entry;
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSError *error;
+    if (![self.entry.managedObjectContext save:&error]) {
+        NSLog(@"Entry save error: %@", error);
+    }
+}
+
+#pragma mark - Properties
+- (UIToolbar *)accessoryToolbar
+{
+    //TODO: Implement keyboard accessory view
+    if (!_accessoryToolbar) {
+        _accessoryToolbar = [[UIToolbar alloc] init];
+    }
+    return _accessoryToolbar;
 }
 
 #pragma mark - IBActions
@@ -38,13 +77,20 @@
 {
     switch (buttonIndex) {
         case 0:
-            
+            [self performSegueWithIdentifier:PreviewSegue sender:nil];
             break;
         case 1:
+            //send to server
             break;
         default:
             NSLog(@"Invalid action sheet button tapped");
             break;
     }
+}
+
+#pragma mark - JMSEntryPreviewDelegate
+- (void)entryPreviewViewControllerDismissed:(JMSEntryPreviewViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

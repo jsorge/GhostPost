@@ -10,22 +10,36 @@
 #import "JMSEntryStore.h"
 #import "JMSManagedObjectContext.h"
 #import "JMSGhostEntry.h"
+#import "JMSEditDraftViewController.h"
+#import "JMSSettingsTableViewController.h"
 
 static NSString *const SavedPostCellKey = @"ruid_SavedPostCell";
-static NSString *const EditDraftSegueKey = @"seg_EditDraftSegue";
+static NSString *const EditDraftSegueKey = @"seg_EditDraft";
+static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 
-@interface JMSEntryListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface JMSEntryListViewController () <UITableViewDataSource, UITableViewDelegate, JMSGhostPostSettingsDelegate>
 @property (weak, nonatomic)IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic)JMSManagedObjectContext *context;
 @property (strong, nonatomic)NSFetchedResultsController *fetchedResultsController;
 @end
 
 @implementation JMSEntryListViewController
+#pragma mark - Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.tableView.delegate = self;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:EditDraftSegueKey]) {
+        JMSEditDraftViewController *destination = (JMSEditDraftViewController *)segue.destinationViewController;
+        NSAssert([sender isKindOfClass:[JMSGhostEntry class]], @"Activating the %@ segue requires a new entry as the sender", EditDraftSegueKey);
+        destination.entry = sender;
+    }
 }
 
 #pragma mark - Properties
@@ -52,19 +66,19 @@ static NSString *const EditDraftSegueKey = @"seg_EditDraftSegue";
 #pragma mark - IBActions
 - (IBAction)settingsButtonTapped:(id)sender
 {
-    
+    [self performSegueWithIdentifier:ShowSettingsSegueKey sender:nil];
 }
 
 - (IBAction)addButtonTapped:(id)sender
 {
-    
+    JMSGhostEntry *newEntry = [JMSGhostEntry newInstanceInManagedObjectContext:self.context];
+    [self performSegueWithIdentifier:EditDraftSegueKey sender:newEntry];
 }
 
 - (IBAction)actionButtonTapped:(id)sender
 {
-    
+    //TODO: Implement posting from the home screen
 }
-
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -88,6 +102,15 @@ static NSString *const EditDraftSegueKey = @"seg_EditDraftSegue";
 }
 
 #pragma mark - UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    JMSGhostEntry *selectedEntry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:EditDraftSegueKey sender:selectedEntry];
+}
 
-
+#pragma mark - JMSGhostPostSettingsDelegate
+- (void)ghostPostSettingsTableViewControllerDismissed:(JMSSettingsTableViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
