@@ -46,6 +46,7 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    self.entry.markdownText = self.textView.text;
     [self.entry.managedObjectContext save:nil];
 }
 

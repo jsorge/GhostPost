@@ -17,7 +17,7 @@ static NSString *const SavedPostCellKey = @"ruid_SavedPostCell";
 static NSString *const EditDraftSegueKey = @"seg_EditDraft";
 static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 
-@interface JMSEntryListViewController () <UITableViewDataSource, UITableViewDelegate, JMSGhostPostSettingsDelegate>
+@interface JMSEntryListViewController () <UITableViewDataSource, UITableViewDelegate, JMSGhostPostSettingsDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic)IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic)JMSManagedObjectContext *context;
@@ -67,6 +67,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
                                                                         managedObjectContext:self.context
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+        _fetchedResultsController.delegate = self;
     }
     return _fetchedResultsController;
 }
@@ -120,5 +121,16 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 - (void)ghostPostSettingsTableViewControllerDismissed:(JMSSettingsTableViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - NSFetchedResultsControllerDelegate
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller;
+{
+    NSLog(@"changing content");
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller;
+{
+    NSLog(@"content changed");
 }
 @end

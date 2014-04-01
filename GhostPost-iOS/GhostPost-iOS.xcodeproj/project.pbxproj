@@ -257,10 +257,10 @@
 		9339791B18EA508A00891457 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9339791C18EA508A00891457 /* JMSEditDraftViewController.h */,
-				9339791D18EA508A00891457 /* JMSEditDraftViewController.m */,
 				9339791E18EA508A00891457 /* JMSEntryListViewController.h */,
 				9339791F18EA508A00891457 /* JMSEntryListViewController.m */,
+				9339791C18EA508A00891457 /* JMSEditDraftViewController.h */,
+				9339791D18EA508A00891457 /* JMSEditDraftViewController.m */,
 				9339792018EA508A00891457 /* JMSEntryPreviewViewController.h */,
 				9339792118EA508A00891457 /* JMSEntryPreviewViewController.m */,
 				9339792218EA508A00891457 /* JMSSettingsTableViewController.h */,
@@ -584,6 +584,7 @@
 				933978E718EA501F00891457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		933978E818EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +593,7 @@
 				933978EA18EA501F00891457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
