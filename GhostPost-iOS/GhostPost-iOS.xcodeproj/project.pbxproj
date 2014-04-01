@@ -12,15 +12,33 @@
 		933978BB18EA501F00891457 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978BA18EA501F00891457 /* UIKit.framework */; };
 		933978C118EA501F00891457 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 933978BF18EA501F00891457 /* InfoPlist.strings */; };
 		933978C318EA501F00891457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978C218EA501F00891457 /* main.m */; };
-		933978C718EA501F00891457 /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978C618EA501F00891457 /* JMSAppDelegate.m */; };
-		933978CA18EA501F00891457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933978C818EA501F00891457 /* Main.storyboard */; };
-		933978CD18EA501F00891457 /* JMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978CC18EA501F00891457 /* JMSViewController.m */; };
 		933978CF18EA501F00891457 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933978CE18EA501F00891457 /* Images.xcassets */; };
 		933978D618EA501F00891457 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978D518EA501F00891457 /* XCTest.framework */; };
 		933978D718EA501F00891457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978B618EA501F00891457 /* Foundation.framework */; };
 		933978D818EA501F00891457 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978BA18EA501F00891457 /* UIKit.framework */; };
 		933978E018EA501F00891457 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 933978DE18EA501F00891457 /* InfoPlist.strings */; };
 		933978E218EA501F00891457 /* GhostPost_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978E118EA501F00891457 /* GhostPost_iOSTests.m */; };
+		933978F818EA504100891457 /* GhostPostCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 933978EC18EA504100891457 /* GhostPostCoreDataModel.xcdatamodeld */; };
+		933978F918EA504100891457 /* JMSEntryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978EF18EA504100891457 /* JMSEntryStore.m */; };
+		933978FA18EA504100891457 /* JMSGhostEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F118EA504100891457 /* JMSGhostEntry.m */; };
+		933978FB18EA504100891457 /* JMSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F318EA504100891457 /* JMSManagedObject.m */; };
+		933978FC18EA504100891457 /* JMSManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F518EA504100891457 /* JMSManagedObjectContext.m */; };
+		933978FD18EA504100891457 /* JMSSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F718EA504100891457 /* JMSSettingsController.m */; };
+		933978FF18EA506D00891457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933978FE18EA506D00891457 /* Main.storyboard */; };
+		9339791218EA507E00891457 /* JKSMarkdownDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339790218EA507D00891457 /* JKSMarkdownDocument.m */; };
+		9339791318EA507E00891457 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790418EA507D00891457 /* autolink.c */; };
+		9339791418EA507E00891457 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790618EA507D00891457 /* buffer.c */; };
+		9339791518EA507E00891457 /* escape.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790818EA507E00891457 /* escape.c */; };
+		9339791618EA507E00891457 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790A18EA507E00891457 /* html.c */; };
+		9339791718EA507E00891457 /* html_blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790C18EA507E00891457 /* html_blocks.c */; };
+		9339791818EA507E00891457 /* html_smartypants.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790D18EA507E00891457 /* html_smartypants.c */; };
+		9339791918EA507E00891457 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790E18EA507E00891457 /* markdown.c */; };
+		9339791A18EA507E00891457 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339791018EA507E00891457 /* stack.c */; };
+		9339792418EA508A00891457 /* JMSEditDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339791D18EA508A00891457 /* JMSEditDraftViewController.m */; };
+		9339792518EA508A00891457 /* JMSEntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339791F18EA508A00891457 /* JMSEntryListViewController.m */; };
+		9339792618EA508A00891457 /* JMSEntryPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792118EA508A00891457 /* JMSEntryPreviewViewController.m */; };
+		9339792718EA508A00891457 /* JMSSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792318EA508A00891457 /* JMSSettingsTableViewController.m */; };
+		9339792A18EA509100891457 /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792918EA509100891457 /* JMSAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,17 +60,50 @@
 		933978C018EA501F00891457 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		933978C218EA501F00891457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		933978C418EA501F00891457 /* GhostPost-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GhostPost-iOS-Prefix.pch"; sourceTree = "<group>"; };
-		933978C518EA501F00891457 /* JMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
-		933978C618EA501F00891457 /* JMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
-		933978C918EA501F00891457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		933978CB18EA501F00891457 /* JMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSViewController.h; sourceTree = "<group>"; };
-		933978CC18EA501F00891457 /* JMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSViewController.m; sourceTree = "<group>"; };
 		933978CE18EA501F00891457 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		933978D418EA501F00891457 /* GhostPost-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GhostPost-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		933978D518EA501F00891457 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		933978DD18EA501F00891457 /* GhostPost-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostPost-iOSTests-Info.plist"; sourceTree = "<group>"; };
 		933978DF18EA501F00891457 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		933978E118EA501F00891457 /* GhostPost_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostPost_iOSTests.m; sourceTree = "<group>"; };
+		933978ED18EA504100891457 /* GhostPostCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GhostPostCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		933978EE18EA504100891457 /* JMSEntryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSEntryStore.h; sourceTree = "<group>"; };
+		933978EF18EA504100891457 /* JMSEntryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSEntryStore.m; sourceTree = "<group>"; };
+		933978F018EA504100891457 /* JMSGhostEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSGhostEntry.h; sourceTree = "<group>"; };
+		933978F118EA504100891457 /* JMSGhostEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSGhostEntry.m; sourceTree = "<group>"; };
+		933978F218EA504100891457 /* JMSManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSManagedObject.h; sourceTree = "<group>"; };
+		933978F318EA504100891457 /* JMSManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSManagedObject.m; sourceTree = "<group>"; };
+		933978F418EA504100891457 /* JMSManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSManagedObjectContext.h; sourceTree = "<group>"; };
+		933978F518EA504100891457 /* JMSManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSManagedObjectContext.m; sourceTree = "<group>"; };
+		933978F618EA504100891457 /* JMSSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSSettingsController.h; sourceTree = "<group>"; };
+		933978F718EA504100891457 /* JMSSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSSettingsController.m; sourceTree = "<group>"; };
+		933978FE18EA506D00891457 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9339790118EA507D00891457 /* JKSMarkdownDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSMarkdownDocument.h; sourceTree = "<group>"; };
+		9339790218EA507D00891457 /* JKSMarkdownDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSMarkdownDocument.m; sourceTree = "<group>"; };
+		9339790418EA507D00891457 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autolink.c; sourceTree = "<group>"; };
+		9339790518EA507D00891457 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		9339790618EA507D00891457 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = buffer.c; sourceTree = "<group>"; };
+		9339790718EA507E00891457 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		9339790818EA507E00891457 /* escape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = escape.c; sourceTree = "<group>"; };
+		9339790918EA507E00891457 /* escape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = escape.h; sourceTree = "<group>"; };
+		9339790A18EA507E00891457 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html.c; sourceTree = "<group>"; };
+		9339790B18EA507E00891457 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		9339790C18EA507E00891457 /* html_blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html_blocks.c; sourceTree = "<group>"; };
+		9339790D18EA507E00891457 /* html_smartypants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html_smartypants.c; sourceTree = "<group>"; };
+		9339790E18EA507E00891457 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = markdown.c; sourceTree = "<group>"; };
+		9339790F18EA507E00891457 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = markdown.h; sourceTree = "<group>"; };
+		9339791018EA507E00891457 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
+		9339791118EA507E00891457 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		9339791C18EA508A00891457 /* JMSEditDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSEditDraftViewController.h; sourceTree = "<group>"; };
+		9339791D18EA508A00891457 /* JMSEditDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSEditDraftViewController.m; sourceTree = "<group>"; };
+		9339791E18EA508A00891457 /* JMSEntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSEntryListViewController.h; sourceTree = "<group>"; };
+		9339791F18EA508A00891457 /* JMSEntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSEntryListViewController.m; sourceTree = "<group>"; };
+		9339792018EA508A00891457 /* JMSEntryPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSEntryPreviewViewController.h; sourceTree = "<group>"; };
+		9339792118EA508A00891457 /* JMSEntryPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSEntryPreviewViewController.m; sourceTree = "<group>"; };
+		9339792218EA508A00891457 /* JMSSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSSettingsTableViewController.h; sourceTree = "<group>"; };
+		9339792318EA508A00891457 /* JMSSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSSettingsTableViewController.m; sourceTree = "<group>"; };
+		9339792818EA509100891457 /* JMSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
+		9339792918EA509100891457 /* JMSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +163,12 @@
 		933978BC18EA501F00891457 /* GhostPost-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				933978C518EA501F00891457 /* JMSAppDelegate.h */,
-				933978C618EA501F00891457 /* JMSAppDelegate.m */,
-				933978C818EA501F00891457 /* Main.storyboard */,
-				933978CB18EA501F00891457 /* JMSViewController.h */,
-				933978CC18EA501F00891457 /* JMSViewController.m */,
+				9339792818EA509100891457 /* JMSAppDelegate.h */,
+				9339792918EA509100891457 /* JMSAppDelegate.m */,
+				933978FE18EA506D00891457 /* Main.storyboard */,
+				9339791B18EA508A00891457 /* View Controllers */,
 				933978CE18EA501F00891457 /* Images.xcassets */,
+				933978EB18EA504100891457 /* Model */,
 				933978BD18EA501F00891457 /* Supporting Files */,
 			);
 			path = "GhostPost-iOS";
@@ -126,6 +177,8 @@
 		933978BD18EA501F00891457 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9339790018EA507D00891457 /* CocoaHoedown */,
+				9339790318EA507D00891457 /* hoedown */,
 				933978BE18EA501F00891457 /* GhostPost-iOS-Info.plist */,
 				933978BF18EA501F00891457 /* InfoPlist.strings */,
 				933978C218EA501F00891457 /* main.m */,
@@ -150,6 +203,70 @@
 				933978DE18EA501F00891457 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		933978EB18EA504100891457 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				933978EC18EA504100891457 /* GhostPostCoreDataModel.xcdatamodeld */,
+				933978EE18EA504100891457 /* JMSEntryStore.h */,
+				933978EF18EA504100891457 /* JMSEntryStore.m */,
+				933978F018EA504100891457 /* JMSGhostEntry.h */,
+				933978F118EA504100891457 /* JMSGhostEntry.m */,
+				933978F218EA504100891457 /* JMSManagedObject.h */,
+				933978F318EA504100891457 /* JMSManagedObject.m */,
+				933978F418EA504100891457 /* JMSManagedObjectContext.h */,
+				933978F518EA504100891457 /* JMSManagedObjectContext.m */,
+				933978F618EA504100891457 /* JMSSettingsController.h */,
+				933978F718EA504100891457 /* JMSSettingsController.m */,
+			);
+			name = Model;
+			path = ../../Shared;
+			sourceTree = "<group>";
+		};
+		9339790018EA507D00891457 /* CocoaHoedown */ = {
+			isa = PBXGroup;
+			children = (
+				9339790118EA507D00891457 /* JKSMarkdownDocument.h */,
+				9339790218EA507D00891457 /* JKSMarkdownDocument.m */,
+			);
+			path = CocoaHoedown;
+			sourceTree = "<group>";
+		};
+		9339790318EA507D00891457 /* hoedown */ = {
+			isa = PBXGroup;
+			children = (
+				9339790418EA507D00891457 /* autolink.c */,
+				9339790518EA507D00891457 /* autolink.h */,
+				9339790618EA507D00891457 /* buffer.c */,
+				9339790718EA507E00891457 /* buffer.h */,
+				9339790818EA507E00891457 /* escape.c */,
+				9339790918EA507E00891457 /* escape.h */,
+				9339790A18EA507E00891457 /* html.c */,
+				9339790B18EA507E00891457 /* html.h */,
+				9339790C18EA507E00891457 /* html_blocks.c */,
+				9339790D18EA507E00891457 /* html_smartypants.c */,
+				9339790E18EA507E00891457 /* markdown.c */,
+				9339790F18EA507E00891457 /* markdown.h */,
+				9339791018EA507E00891457 /* stack.c */,
+				9339791118EA507E00891457 /* stack.h */,
+			);
+			path = hoedown;
+			sourceTree = "<group>";
+		};
+		9339791B18EA508A00891457 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9339791C18EA508A00891457 /* JMSEditDraftViewController.h */,
+				9339791D18EA508A00891457 /* JMSEditDraftViewController.m */,
+				9339791E18EA508A00891457 /* JMSEntryListViewController.h */,
+				9339791F18EA508A00891457 /* JMSEntryListViewController.m */,
+				9339792018EA508A00891457 /* JMSEntryPreviewViewController.h */,
+				9339792118EA508A00891457 /* JMSEntryPreviewViewController.m */,
+				9339792218EA508A00891457 /* JMSSettingsTableViewController.h */,
+				9339792318EA508A00891457 /* JMSSettingsTableViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +346,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933978FF18EA506D00891457 /* Main.storyboard in Resources */,
 				933978CF18EA501F00891457 /* Images.xcassets in Resources */,
 				933978C118EA501F00891457 /* InfoPlist.strings in Resources */,
-				933978CA18EA501F00891457 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +367,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				933978CD18EA501F00891457 /* JMSViewController.m in Sources */,
+				933978FD18EA504100891457 /* JMSSettingsController.m in Sources */,
+				9339792618EA508A00891457 /* JMSEntryPreviewViewController.m in Sources */,
+				9339791918EA507E00891457 /* markdown.c in Sources */,
 				933978C318EA501F00891457 /* main.m in Sources */,
-				933978C718EA501F00891457 /* JMSAppDelegate.m in Sources */,
+				9339791518EA507E00891457 /* escape.c in Sources */,
+				9339792418EA508A00891457 /* JMSEditDraftViewController.m in Sources */,
+				9339791318EA507E00891457 /* autolink.c in Sources */,
+				9339791418EA507E00891457 /* buffer.c in Sources */,
+				9339791218EA507E00891457 /* JKSMarkdownDocument.m in Sources */,
+				933978F818EA504100891457 /* GhostPostCoreDataModel.xcdatamodeld in Sources */,
+				9339792A18EA509100891457 /* JMSAppDelegate.m in Sources */,
+				933978F918EA504100891457 /* JMSEntryStore.m in Sources */,
+				9339792518EA508A00891457 /* JMSEntryListViewController.m in Sources */,
+				9339791618EA507E00891457 /* html.c in Sources */,
+				9339791818EA507E00891457 /* html_smartypants.c in Sources */,
+				933978FA18EA504100891457 /* JMSGhostEntry.m in Sources */,
+				933978FB18EA504100891457 /* JMSManagedObject.m in Sources */,
+				933978FC18EA504100891457 /* JMSManagedObjectContext.m in Sources */,
+				9339791A18EA507E00891457 /* stack.c in Sources */,
+				9339792718EA508A00891457 /* JMSSettingsTableViewController.m in Sources */,
+				9339791718EA507E00891457 /* html_blocks.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +416,6 @@
 				933978C018EA501F00891457 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		933978C818EA501F00891457 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				933978C918EA501F00891457 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		933978DE18EA501F00891457 /* InfoPlist.strings */ = {
@@ -467,6 +594,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		933978EC18EA504100891457 /* GhostPostCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				933978ED18EA504100891457 /* GhostPostCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 933978ED18EA504100891457 /* GhostPostCoreDataModel.xcdatamodel */;
+			path = GhostPostCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 933978AB18EA501F00891457 /* Project object */;
 }
