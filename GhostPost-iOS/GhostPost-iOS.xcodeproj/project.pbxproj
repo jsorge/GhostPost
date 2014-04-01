@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		933978B718EA501F00891457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978B618EA501F00891457 /* Foundation.framework */; };
+		933978B918EA501F00891457 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978B818EA501F00891457 /* CoreGraphics.framework */; };
+		933978BB18EA501F00891457 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978BA18EA501F00891457 /* UIKit.framework */; };
+		933978C118EA501F00891457 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 933978BF18EA501F00891457 /* InfoPlist.strings */; };
+		933978C318EA501F00891457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978C218EA501F00891457 /* main.m */; };
+		933978C718EA501F00891457 /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978C618EA501F00891457 /* JMSAppDelegate.m */; };
+		933978CA18EA501F00891457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933978C818EA501F00891457 /* Main.storyboard */; };
+		933978CD18EA501F00891457 /* JMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978CC18EA501F00891457 /* JMSViewController.m */; };
+		933978CF18EA501F00891457 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933978CE18EA501F00891457 /* Images.xcassets */; };
+		933978D618EA501F00891457 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978D518EA501F00891457 /* XCTest.framework */; };
+		933978D718EA501F00891457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978B618EA501F00891457 /* Foundation.framework */; };
+		933978D818EA501F00891457 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933978BA18EA501F00891457 /* UIKit.framework */; };
+		933978E018EA501F00891457 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 933978DE18EA501F00891457 /* InfoPlist.strings */; };
+		933978E218EA501F00891457 /* GhostPost_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978E118EA501F00891457 /* GhostPost_iOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		933978D918EA501F00891457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 933978AB18EA501F00891457 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933978B218EA501F00891457;
+			remoteInfo = "GhostPost-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		933978B318EA501F00891457 /* GhostPost-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GhostPost-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933978B618EA501F00891457 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		933978B818EA501F00891457 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		933978BA18EA501F00891457 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		933978BE18EA501F00891457 /* GhostPost-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostPost-iOS-Info.plist"; sourceTree = "<group>"; };
+		933978C018EA501F00891457 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		933978C218EA501F00891457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		933978C418EA501F00891457 /* GhostPost-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GhostPost-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		933978C518EA501F00891457 /* JMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
+		933978C618EA501F00891457 /* JMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
+		933978C918EA501F00891457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		933978CB18EA501F00891457 /* JMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSViewController.h; sourceTree = "<group>"; };
+		933978CC18EA501F00891457 /* JMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSViewController.m; sourceTree = "<group>"; };
+		933978CE18EA501F00891457 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		933978D418EA501F00891457 /* GhostPost-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GhostPost-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933978D518EA501F00891457 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		933978DD18EA501F00891457 /* GhostPost-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostPost-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		933978DF18EA501F00891457 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		933978E118EA501F00891457 /* GhostPost_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostPost_iOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		933978B018EA501F00891457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978B918EA501F00891457 /* CoreGraphics.framework in Frameworks */,
+				933978BB18EA501F00891457 /* UIKit.framework in Frameworks */,
+				933978B718EA501F00891457 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933978D118EA501F00891457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978D618EA501F00891457 /* XCTest.framework in Frameworks */,
+				933978D818EA501F00891457 /* UIKit.framework in Frameworks */,
+				933978D718EA501F00891457 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		933978AA18EA501F00891457 = {
+			isa = PBXGroup;
+			children = (
+				933978BC18EA501F00891457 /* GhostPost-iOS */,
+				933978DB18EA501F00891457 /* GhostPost-iOSTests */,
+				933978B518EA501F00891457 /* Frameworks */,
+				933978B418EA501F00891457 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		933978B418EA501F00891457 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				933978B318EA501F00891457 /* GhostPost-iOS.app */,
+				933978D418EA501F00891457 /* GhostPost-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		933978B518EA501F00891457 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				933978B618EA501F00891457 /* Foundation.framework */,
+				933978B818EA501F00891457 /* CoreGraphics.framework */,
+				933978BA18EA501F00891457 /* UIKit.framework */,
+				933978D518EA501F00891457 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		933978BC18EA501F00891457 /* GhostPost-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				933978C518EA501F00891457 /* JMSAppDelegate.h */,
+				933978C618EA501F00891457 /* JMSAppDelegate.m */,
+				933978C818EA501F00891457 /* Main.storyboard */,
+				933978CB18EA501F00891457 /* JMSViewController.h */,
+				933978CC18EA501F00891457 /* JMSViewController.m */,
+				933978CE18EA501F00891457 /* Images.xcassets */,
+				933978BD18EA501F00891457 /* Supporting Files */,
+			);
+			path = "GhostPost-iOS";
+			sourceTree = "<group>";
+		};
+		933978BD18EA501F00891457 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				933978BE18EA501F00891457 /* GhostPost-iOS-Info.plist */,
+				933978BF18EA501F00891457 /* InfoPlist.strings */,
+				933978C218EA501F00891457 /* main.m */,
+				933978C418EA501F00891457 /* GhostPost-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		933978DB18EA501F00891457 /* GhostPost-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				933978E118EA501F00891457 /* GhostPost_iOSTests.m */,
+				933978DC18EA501F00891457 /* Supporting Files */,
+			);
+			path = "GhostPost-iOSTests";
+			sourceTree = "<group>";
+		};
+		933978DC18EA501F00891457 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				933978DD18EA501F00891457 /* GhostPost-iOSTests-Info.plist */,
+				933978DE18EA501F00891457 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		933978B218EA501F00891457 /* GhostPost-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOS" */;
+			buildPhases = (
+				933978AF18EA501F00891457 /* Sources */,
+				933978B018EA501F00891457 /* Frameworks */,
+				933978B118EA501F00891457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GhostPost-iOS";
+			productName = "GhostPost-iOS";
+			productReference = 933978B318EA501F00891457 /* GhostPost-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		933978D318EA501F00891457 /* GhostPost-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933978E818EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOSTests" */;
+			buildPhases = (
+				933978D018EA501F00891457 /* Sources */,
+				933978D118EA501F00891457 /* Frameworks */,
+				933978D218EA501F00891457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				933978DA18EA501F00891457 /* PBXTargetDependency */,
+			);
+			name = "GhostPost-iOSTests";
+			productName = "GhostPost-iOSTests";
+			productReference = 933978D418EA501F00891457 /* GhostPost-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		933978AB18EA501F00891457 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JMS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = jsorge;
+				TargetAttributes = {
+					933978D318EA501F00891457 = {
+						TestTargetID = 933978B218EA501F00891457;
+					};
+				};
+			};
+			buildConfigurationList = 933978AE18EA501F00891457 /* Build configuration list for PBXProject "GhostPost-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 933978AA18EA501F00891457;
+			productRefGroup = 933978B418EA501F00891457 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				933978B218EA501F00891457 /* GhostPost-iOS */,
+				933978D318EA501F00891457 /* GhostPost-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		933978B118EA501F00891457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978CF18EA501F00891457 /* Images.xcassets in Resources */,
+				933978C118EA501F00891457 /* InfoPlist.strings in Resources */,
+				933978CA18EA501F00891457 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933978D218EA501F00891457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978E018EA501F00891457 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		933978AF18EA501F00891457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978CD18EA501F00891457 /* JMSViewController.m in Sources */,
+				933978C318EA501F00891457 /* main.m in Sources */,
+				933978C718EA501F00891457 /* JMSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933978D018EA501F00891457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933978E218EA501F00891457 /* GhostPost_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		933978DA18EA501F00891457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 933978B218EA501F00891457 /* GhostPost-iOS */;
+			targetProxy = 933978D918EA501F00891457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		933978BF18EA501F00891457 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933978C018EA501F00891457 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		933978C818EA501F00891457 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933978C918EA501F00891457 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		933978DE18EA501F00891457 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933978DF18EA501F00891457 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		933978E318EA501F00891457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		933978E418EA501F00891457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		933978E618EA501F00891457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
+				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		933978E718EA501F00891457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
+				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		933978E918EA501F00891457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GhostPost-iOS.app/GhostPost-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GhostPost-iOSTests/GhostPost-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		933978EA18EA501F00891457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GhostPost-iOS.app/GhostPost-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
+				INFOPLIST_FILE = "GhostPost-iOSTests/GhostPost-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		933978AE18EA501F00891457 /* Build configuration list for PBXProject "GhostPost-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933978E318EA501F00891457 /* Debug */,
+				933978E418EA501F00891457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933978E618EA501F00891457 /* Debug */,
+				933978E718EA501F00891457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		933978E818EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933978E918EA501F00891457 /* Debug */,
+				933978EA18EA501F00891457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 933978AB18EA501F00891457 /* Project object */;
+}
