@@ -31,6 +31,10 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
     [super viewDidLoad];
     
     self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    NSError *error;
+    [self.fetchedResultsController performFetch:&error];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -39,6 +43,9 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
         JMSEditDraftViewController *destination = (JMSEditDraftViewController *)segue.destinationViewController;
         NSAssert([sender isKindOfClass:[JMSGhostEntry class]], @"Activating the %@ segue requires a new entry as the sender", EditDraftSegueKey);
         destination.entry = sender;
+    } else if ([segue.identifier isEqualToString:ShowSettingsSegueKey]) {
+        JMSSettingsTableViewController *destination = (JMSSettingsTableViewController *)segue.destinationViewController;
+        destination.delegate = self;
     }
 }
 
@@ -55,6 +62,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 {
     if (!_fetchedResultsController) {
         NSFetchRequest *allEntriesFetch = [JMSGhostEntry fetchRequest];
+        allEntriesFetch.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:MarkdownTextKey ascending:YES]];
         _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:allEntriesFetch
                                                                         managedObjectContext:self.context
                                                                           sectionNameKeyPath:nil
@@ -95,7 +103,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
     }
     
     JMSGhostEntry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = entry.postTitle;
+    cell.textLabel.text = entry.markdownText;
     cell.detailTextLabel.text = @"";
     
     return cell;

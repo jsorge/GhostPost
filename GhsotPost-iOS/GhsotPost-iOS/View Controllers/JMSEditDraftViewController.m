@@ -39,6 +39,7 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
         UINavigationController *navigation = segue.destinationViewController;
         JMSEntryPreviewViewController *destination = (JMSEntryPreviewViewController *)navigation.topViewController;
         destination.entry = self.entry;
+        destination.delegate = self;
     }
 }
 
@@ -80,7 +81,7 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
             [self performSegueWithIdentifier:PreviewSegue sender:nil];
             break;
         case 1:
-            //send to server
+            //TODO: send to server
             break;
         default:
             NSLog(@"Invalid action sheet button tapped");

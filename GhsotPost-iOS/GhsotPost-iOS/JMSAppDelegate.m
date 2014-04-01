@@ -14,10 +14,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if ([JMSManagedObjectContext storeNeedsMigrationAtURL:[JMSEntryStore storeURL]]) {
-        //TODO: perform migration
-        //See Goracke's Core Data potpurri talk
-    }
+//    if ([JMSManagedObjectContext storeNeedsMigrationAtURL:[JMSEntryStore storeURL]]) {
+//        //TODO: perform migration
+//        //See Goracke's Core Data potpurri talk
+//    }
     
     
     return YES;

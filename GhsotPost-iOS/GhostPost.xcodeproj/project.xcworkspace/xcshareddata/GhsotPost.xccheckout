@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D1FEE7AC-5845-41A6-A345-B1E4CBEE8C05</string>
+	<string>67BC4472-5A26-435E-B5EC-9997B81ADAC7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GhsotPost</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C2C1FCC8-F3B0-4F2B-BB5D-CC523E13E16E</key>
+		<key>888FEEB0-2E44-4DF0-BA8C-B32A254B99E8</key>
 		<string>https://github.com/jsorge/GhostPost.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GhsotPost-iOS/GhsotPost.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C2C1FCC8-F3B0-4F2B-BB5D-CC523E13E16E</key>
+		<key>888FEEB0-2E44-4DF0-BA8C-B32A254B99E8</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C2C1FCC8-F3B0-4F2B-BB5D-CC523E13E16E</string>
+	<string>888FEEB0-2E44-4DF0-BA8C-B32A254B99E8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C2C1FCC8-F3B0-4F2B-BB5D-CC523E13E16E</string>
+			<string>888FEEB0-2E44-4DF0-BA8C-B32A254B99E8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GhostPost</string>
 		</dict>

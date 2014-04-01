@@ -14,12 +14,12 @@
 + (NSURL *)storeURL
 {
     NSArray *locations = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    NSString *documentDirectory = [(NSURL *)[locations firstObject] path];
+    NSURL *documentDirectory = (NSURL *)[locations firstObject];
     
-    NSString *storeLocation = [documentDirectory stringByAppendingPathComponent:@"GhostPosts"];
-    storeLocation = [storeLocation stringByAppendingPathExtension:@"sqlite"];
+    NSURL *storeLocation = [documentDirectory URLByAppendingPathComponent:@"GhostPosts"];
+    storeLocation = [storeLocation URLByAppendingPathExtension:@"sqlite"];
     
-    return [NSURL URLWithString:storeLocation];
+    return storeLocation;
 }
 
 @end

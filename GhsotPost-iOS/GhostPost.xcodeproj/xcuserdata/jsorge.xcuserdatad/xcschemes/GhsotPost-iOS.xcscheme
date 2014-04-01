@@ -17,7 +17,7 @@
                BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
                BuildableName = "GhsotPost.app"
                BlueprintName = "GhsotPost"
-               ReferencedContainer = "container:GhsotPost.xcodeproj">
+               ReferencedContainer = "container:GhostPost.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "93D20ABE18E1C5B100647F7C"
                BuildableName = "GhsotPost-iOSTests.xctest"
                BlueprintName = "GhsotPost-iOSTests"
-               ReferencedContainer = "container:GhsotPost.xcodeproj">
+               ReferencedContainer = "container:GhostPost.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost.app"
             BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhsotPost.xcodeproj">
+            ReferencedContainer = "container:GhostPost.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost.app"
             BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhsotPost.xcodeproj">
+            ReferencedContainer = "container:GhostPost.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
             BuildableName = "GhsotPost.app"
             BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhsotPost.xcodeproj">
+            ReferencedContainer = "container:GhostPost.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

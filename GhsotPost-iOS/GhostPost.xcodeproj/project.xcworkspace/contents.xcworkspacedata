@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GhsotPost.xcodeproj">
+      location = "self:GhostPost.xcodeproj">
    </FileRef>
 </Workspace>
