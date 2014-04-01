@@ -1,18 +1,18 @@
 //
-//  GhsotPost_iOSTests.m
-//  GhsotPost-iOSTests
+//  GhostPost_iOSTests.m
+//  GhostPost-iOSTests
 //
-//  Created by Jared Sorge on 3/25/14.
+//  Created by Jared Sorge on 3/31/14.
 //  Copyright (c) 2014 jsorge. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface GhsotPost_iOSTests : XCTestCase
+@interface GhostPost_iOSTests : XCTestCase
 
 @end
 
-@implementation GhsotPost_iOSTests
+@implementation GhostPost_iOSTests
 
 - (void)setUp
 {

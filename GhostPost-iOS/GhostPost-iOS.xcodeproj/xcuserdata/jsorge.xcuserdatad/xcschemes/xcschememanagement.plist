@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GhsotPost-iOS.xcscheme</key>
+		<key>GhostPost-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>93D20A9D18E1C5B100647F7C</key>
+		<key>933978B218EA501F00891457</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93D20ABE18E1C5B100647F7C</key>
+		<key>933978D318EA501F00891457</key>
 		<dict>
 			<key>primary</key>
 			<true/>

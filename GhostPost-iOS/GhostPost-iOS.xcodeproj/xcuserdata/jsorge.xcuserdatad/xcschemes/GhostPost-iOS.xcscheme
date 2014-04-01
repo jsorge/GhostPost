@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
-               BuildableName = "GhsotPost.app"
-               BlueprintName = "GhsotPost"
-               ReferencedContainer = "container:GhostPost.xcodeproj">
+               BlueprintIdentifier = "933978B218EA501F00891457"
+               BuildableName = "GhostPost-iOS.app"
+               BlueprintName = "GhostPost-iOS"
+               ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93D20ABE18E1C5B100647F7C"
-               BuildableName = "GhsotPost-iOSTests.xctest"
-               BlueprintName = "GhsotPost-iOSTests"
-               ReferencedContainer = "container:GhostPost.xcodeproj">
+               BlueprintIdentifier = "933978D318EA501F00891457"
+               BuildableName = "GhostPost-iOSTests.xctest"
+               BlueprintName = "GhostPost-iOSTests"
+               ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
-            BuildableName = "GhsotPost.app"
-            BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhostPost.xcodeproj">
+            BlueprintIdentifier = "933978B218EA501F00891457"
+            BuildableName = "GhostPost-iOS.app"
+            BlueprintName = "GhostPost-iOS"
+            ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
-            BuildableName = "GhsotPost.app"
-            BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhostPost.xcodeproj">
+            BlueprintIdentifier = "933978B218EA501F00891457"
+            BuildableName = "GhostPost-iOS.app"
+            BlueprintName = "GhostPost-iOS"
+            ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93D20A9D18E1C5B100647F7C"
-            BuildableName = "GhsotPost.app"
-            BlueprintName = "GhsotPost"
-            ReferencedContainer = "container:GhostPost.xcodeproj">
+            BlueprintIdentifier = "933978B218EA501F00891457"
+            BuildableName = "GhostPost-iOS.app"
+            BlueprintName = "GhostPost-iOS"
+            ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

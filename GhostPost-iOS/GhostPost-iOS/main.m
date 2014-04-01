@@ -1,8 +1,8 @@
 //
 //  main.m
-//  GhsotPost-iOS
+//  GhostPost-iOS
 //
-//  Created by Jared Sorge on 3/25/14.
+//  Created by Jared Sorge on 3/31/14.
 //  Copyright (c) 2014 jsorge. All rights reserved.
 //
 
