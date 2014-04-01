@@ -46,10 +46,7 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    NSError *error;
-    if (![self.entry.managedObjectContext save:&error]) {
-        NSLog(@"Entry save error: %@", error);
-    }
+    [self.entry.managedObjectContext save:nil];
 }
 
 #pragma mark - Properties
