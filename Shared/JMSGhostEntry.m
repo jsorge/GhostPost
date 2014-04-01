@@ -1,6 +1,6 @@
 //
 //  JMSGhostEntry.m
-//  GhsotPost-iOS
+//  GhostPost-iOS
 //
 //  Created by Jared Sorge on 3/26/14.
 //  Copyright (c) 2014 jsorge. All rights reserved.
