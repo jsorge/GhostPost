@@ -2,3 +2,7 @@
 GhostPost-iOS/Pods/
 GhostPost-iOS/Podfile.lock
 /GhostPost-iOS/GhostPost-iOS.xcodeproj/project.xcworkspace/xcuserdata/jsorge.xcuserdatad/UserInterfaceState.xcuserstate
+
+/GhostPost-iOS/GhostPost-iOS.xcodeproj/project.xcworkspace/xcshareddata/GhostPost-iOS.xccheckout
+
+/GhostPost-iOS/GhostPost-iOS.xcodeproj/xcuserdata/jsorge.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
