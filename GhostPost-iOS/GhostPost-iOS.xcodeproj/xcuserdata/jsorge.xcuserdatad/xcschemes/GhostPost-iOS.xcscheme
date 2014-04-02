@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "933978B218EA501F00891457"
                BuildableName = "GhostPost-iOS.app"
-               BlueprintName = "GhostPost-iOS"
+               BlueprintName = "GhostPost"
                ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "933978B218EA501F00891457"
             BuildableName = "GhostPost-iOS.app"
-            BlueprintName = "GhostPost-iOS"
+            BlueprintName = "GhostPost"
             ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "933978B218EA501F00891457"
             BuildableName = "GhostPost-iOS.app"
-            BlueprintName = "GhostPost-iOS"
+            BlueprintName = "GhostPost"
             ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "933978B218EA501F00891457"
             BuildableName = "GhostPost-iOS.app"
-            BlueprintName = "GhostPost-iOS"
+            BlueprintName = "GhostPost"
             ReferencedContainer = "container:GhostPost-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

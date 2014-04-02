@@ -18,6 +18,13 @@
 		9325E2AF18ECA20100D076B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9325E28E18ECA20100D076B9 /* Cocoa.framework */; };
 		9325E2B718ECA20100D076B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9325E2B518ECA20100D076B9 /* InfoPlist.strings */; };
 		9325E2B918ECA20100D076B9 /* GhostPost_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325E2B818ECA20100D076B9 /* GhostPost_MacTests.m */; };
+		9398B90A18ECA4830053216A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9325E29218ECA20100D076B9 /* CoreData.framework */; };
+		9398B91818ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9398B90C18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld */; };
+		9398B91918ECA52A0053216A /* JMSEntryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B90F18ECA52A0053216A /* JMSEntryStore.m */; };
+		9398B91A18ECA52A0053216A /* JMSGhostEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B91118ECA52A0053216A /* JMSGhostEntry.m */; };
+		9398B91B18ECA52A0053216A /* JMSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B91318ECA52A0053216A /* JMSManagedObject.m */; };
+		9398B91C18ECA52A0053216A /* JMSManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B91518ECA52A0053216A /* JMSManagedObjectContext.m */; };
+		9398B91D18ECA52A0053216A /* JMSSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B91718ECA52A0053216A /* JMSSettingsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9325E28B18ECA20100D076B9 /* GhostPost-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GhostPost-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9325E28B18ECA20100D076B9 /* GhostPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9325E28E18ECA20100D076B9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9325E29118ECA20100D076B9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9325E29218ECA20100D076B9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -50,6 +57,18 @@
 		9325E2B418ECA20100D076B9 /* GhostPost-MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostPost-MacTests-Info.plist"; sourceTree = "<group>"; };
 		9325E2B618ECA20100D076B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9325E2B818ECA20100D076B9 /* GhostPost_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostPost_MacTests.m; sourceTree = "<group>"; };
+		9398B90D18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GhostPostCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9398B90E18ECA52A0053216A /* JMSEntryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSEntryStore.h; path = ../../Shared/JMSEntryStore.h; sourceTree = "<group>"; };
+		9398B90F18ECA52A0053216A /* JMSEntryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEntryStore.m; path = ../../Shared/JMSEntryStore.m; sourceTree = "<group>"; };
+		9398B91018ECA52A0053216A /* JMSGhostEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSGhostEntry.h; path = ../../Shared/JMSGhostEntry.h; sourceTree = "<group>"; };
+		9398B91118ECA52A0053216A /* JMSGhostEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSGhostEntry.m; path = ../../Shared/JMSGhostEntry.m; sourceTree = "<group>"; };
+		9398B91218ECA52A0053216A /* JMSManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSManagedObject.h; path = ../../Shared/JMSManagedObject.h; sourceTree = "<group>"; };
+		9398B91318ECA52A0053216A /* JMSManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSManagedObject.m; path = ../../Shared/JMSManagedObject.m; sourceTree = "<group>"; };
+		9398B91418ECA52A0053216A /* JMSManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSManagedObjectContext.h; path = ../../Shared/JMSManagedObjectContext.h; sourceTree = "<group>"; };
+		9398B91518ECA52A0053216A /* JMSManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSManagedObjectContext.m; path = ../../Shared/JMSManagedObjectContext.m; sourceTree = "<group>"; };
+		9398B91618ECA52A0053216A /* JMSSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSSettingsController.h; path = ../../Shared/JMSSettingsController.h; sourceTree = "<group>"; };
+		9398B91718ECA52A0053216A /* JMSSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSSettingsController.m; path = ../../Shared/JMSSettingsController.m; sourceTree = "<group>"; };
+		9398B91E18ECA5400053216A /* GhostPost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = GhostPost.entitlements; path = ../GhostPost.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9398B90A18ECA4830053216A /* CoreData.framework in Frameworks */,
 				9325E28F18ECA20100D076B9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +106,7 @@
 		9325E28C18ECA20100D076B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9325E28B18ECA20100D076B9 /* GhostPost-Mac.app */,
+				9325E28B18ECA20100D076B9 /* GhostPost.app */,
 				9325E2AC18ECA20100D076B9 /* GhostPost-MacTests.xctest */,
 			);
 			name = Products;
@@ -119,6 +139,7 @@
 				9325E2A118ECA20100D076B9 /* JMSAppDelegate.m */,
 				9325E2A318ECA20100D076B9 /* MainMenu.xib */,
 				9325E2A618ECA20100D076B9 /* Images.xcassets */,
+				9398B90B18ECA5170053216A /* Model */,
 				9325E29518ECA20100D076B9 /* Supporting Files */,
 			);
 			path = "GhostPost-Mac";
@@ -127,6 +148,7 @@
 		9325E29518ECA20100D076B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9398B91E18ECA5400053216A /* GhostPost.entitlements */,
 				9325E29618ECA20100D076B9 /* GhostPost-Mac-Info.plist */,
 				9325E29718ECA20100D076B9 /* InfoPlist.strings */,
 				9325E29A18ECA20100D076B9 /* main.m */,
@@ -154,6 +176,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9398B90B18ECA5170053216A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9398B90C18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld */,
+				9398B90E18ECA52A0053216A /* JMSEntryStore.h */,
+				9398B90F18ECA52A0053216A /* JMSEntryStore.m */,
+				9398B91018ECA52A0053216A /* JMSGhostEntry.h */,
+				9398B91118ECA52A0053216A /* JMSGhostEntry.m */,
+				9398B91218ECA52A0053216A /* JMSManagedObject.h */,
+				9398B91318ECA52A0053216A /* JMSManagedObject.m */,
+				9398B91418ECA52A0053216A /* JMSManagedObjectContext.h */,
+				9398B91518ECA52A0053216A /* JMSManagedObjectContext.m */,
+				9398B91618ECA52A0053216A /* JMSSettingsController.h */,
+				9398B91718ECA52A0053216A /* JMSSettingsController.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,7 +211,7 @@
 			);
 			name = GhostPost;
 			productName = "GhostPost-Mac";
-			productReference = 9325E28B18ECA20100D076B9 /* GhostPost-Mac.app */;
+			productReference = 9325E28B18ECA20100D076B9 /* GhostPost.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9325E2AB18ECA20100D076B9 /* GhostPost-MacTests */ = {
@@ -202,6 +242,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = jsorge;
 				TargetAttributes = {
+					9325E28A18ECA20100D076B9 = {
+						DevelopmentTeam = 49LQXRW3X4;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 					9325E2AB18ECA20100D076B9 = {
 						TestTargetID = 9325E28A18ECA20100D076B9;
 					};
@@ -253,8 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9398B91C18ECA52A0053216A /* JMSManagedObjectContext.m in Sources */,
+				9398B91D18ECA52A0053216A /* JMSSettingsController.m in Sources */,
 				9325E29B18ECA20100D076B9 /* main.m in Sources */,
 				9325E2A218ECA20100D076B9 /* JMSAppDelegate.m in Sources */,
+				9398B91818ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld in Sources */,
+				9398B91B18ECA52A0053216A /* JMSManagedObject.m in Sources */,
+				9398B91918ECA52A0053216A /* JMSEntryStore.m in Sources */,
+				9398B91A18ECA52A0053216A /* JMSGhostEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,11 +440,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GhostPost.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-Mac/GhostPost-Mac-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-Mac/GhostPost-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,11 +457,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GhostPost.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-Mac/GhostPost-Mac-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-Mac/GhostPost-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -467,6 +529,7 @@
 				9325E2BE18ECA20100D076B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9325E2BF18ECA20100D076B9 /* Build configuration list for PBXNativeTarget "GhostPost-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -475,8 +538,23 @@
 				9325E2C118ECA20100D076B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9398B90C18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9398B90D18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 9398B90D18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodel */;
+			name = GhostPostCoreDataModel.xcdatamodeld;
+			path = ../../Shared/GhostPostCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9325E28318ECA20100D076B9 /* Project object */;
 }

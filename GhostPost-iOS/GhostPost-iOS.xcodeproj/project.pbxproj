@@ -274,9 +274,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		933978B218EA501F00891457 /* GhostPost-iOS */ = {
+		933978B218EA501F00891457 /* GhostPost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOS" */;
+			buildConfigurationList = 933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost" */;
 			buildPhases = (
 				933978AF18EA501F00891457 /* Sources */,
 				933978B018EA501F00891457 /* Frameworks */,
@@ -286,7 +286,7 @@
 			);
 			dependencies = (
 			);
-			name = "GhostPost-iOS";
+			name = GhostPost;
 			productName = "GhostPost-iOS";
 			productReference = 933978B318EA501F00891457 /* GhostPost-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -345,7 +345,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				933978B218EA501F00891457 /* GhostPost-iOS */,
+				933978B218EA501F00891457 /* GhostPost */,
 				933978D318EA501F00891457 /* GhostPost-iOSTests */,
 			);
 		};
@@ -414,7 +414,7 @@
 /* Begin PBXTargetDependency section */
 		933978DA18EA501F00891457 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 933978B218EA501F00891457 /* GhostPost-iOS */;
+			target = 933978B218EA501F00891457 /* GhostPost */;
 			targetProxy = 933978D918EA501F00891457 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost-iOS" */ = {
+		933978E518EA501F00891457 /* Build configuration list for PBXNativeTarget "GhostPost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				933978E618EA501F00891457 /* Debug */,
