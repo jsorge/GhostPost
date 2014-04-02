@@ -124,13 +124,32 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller;
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    NSLog(@"changing content");
+    [self.tableView beginUpdates];
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller;
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    NSLog(@"content changed");
+    [self.tableView endUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath]
+                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath]
+                                  withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeMove:
+            [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+            break;
+        default:
+            break;
+    }
 }
 @end
