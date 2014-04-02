@@ -178,6 +178,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 #pragma mark - Helpers
 - (void)updateFetchedResultsController
 {
+    self.fetchedResultsController = nil;
     NSError *error;
     [self.fetchedResultsController performFetch:&error];
 }

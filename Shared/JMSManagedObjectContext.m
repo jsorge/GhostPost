@@ -65,16 +65,16 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     return !compatible;
 }
 
+#pragma mark - Private
 - (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator
 {
-    self = [super init];
+    self = [super initWithConcurrencyType:NSMainQueueConcurrencyType];
     if (self) {
         self.persistentStoreCoordinator = coordinator;
     }
     return self;
 }
 
-#pragma mark - Private
 + (NSString *)modelName
 {
     return @"GhostPostCoreDataModel";
@@ -136,6 +136,7 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     }];
 }
 
+#pragma mark - Cleanup
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
