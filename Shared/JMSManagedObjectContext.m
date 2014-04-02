@@ -38,6 +38,9 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     }
     
     JMSManagedObjectContext *context = [[self alloc] initWithPersistentStoreCoordinator:coordinator];
+    if (options[NSPersistentStoreUbiquitousContentNameKey] != nil) {
+        [context registerForiCloudNotifications];
+    }
     
     return context;
 }
