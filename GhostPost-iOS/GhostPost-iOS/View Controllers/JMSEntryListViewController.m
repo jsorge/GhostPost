@@ -12,6 +12,7 @@
 #import "JMSGhostEntry.h"
 #import "JMSEditDraftViewController.h"
 #import "JMSSettingsTableViewController.h"
+@import CoreData;
 
 static NSString *const SavedPostCellKey = @"ruid_SavedPostCell";
 static NSString *const EditDraftSegueKey = @"seg_EditDraft";
@@ -30,11 +31,12 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 {
     [super viewDidLoad];
     
+    [self registerForContextUpdates];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    NSError *error;
-    [self.fetchedResultsController performFetch:&error];
+    [self updateFetchedResultsController];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -49,11 +51,17 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
     }
 }
 
+- (void)dealloc
+{
+    [self deRegisterForContextUpdates];
+}
+
 #pragma mark - Properties
 - (JMSManagedObjectContext *)context
 {
+    //TODO: Make iCloud sync optional and check for it. If it's disabled don't pass the ubiquityStoreName
     if (!_context) {
-        _context = [JMSManagedObjectContext createContextWithStoreURL:[JMSEntryStore storeURL] options:nil];
+        _context = [JMSManagedObjectContext createContextWithStoreURL:[JMSEntryStore storeURL] ubiquityStoreName:[JMSEntryStore ubiquityStoreName]];
     }
     return _context;
 }
@@ -151,5 +159,26 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
         default:
             break;
     }
+}
+
+#pragma mark - iCloud
+- (void)registerForContextUpdates
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateFetchedResultsController)
+                                                 name:ContextNeedsUIUpdateNotification
+                                               object:self.context];
+}
+
+- (void)deRegisterForContextUpdates
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Helpers
+- (void)updateFetchedResultsController
+{
+    NSError *error;
+    [self.fetchedResultsController performFetch:&error];
 }
 @end

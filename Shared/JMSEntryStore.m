@@ -22,4 +22,8 @@
     return storeLocation;
 }
 
++ (NSString *)ubiquityStoreName
+{
+    return @"GhostPostUbiquityStore";
+}
 @end

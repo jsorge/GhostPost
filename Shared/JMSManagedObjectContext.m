@@ -7,11 +7,13 @@
 //
 
 #import "JMSManagedObjectContext.h"
+#import "JMSEntryStore.h"
+
+NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
 
 @implementation JMSManagedObjectContext
-
 #pragma mark - API
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL options:(NSDictionary *)options
++ (instancetype)createContextWithStoreURL:(NSURL *)storeURL ubiquityStoreName:(NSString *)ubiquityStoreName
 {
     NSMutableArray *models = [NSMutableArray array];
     NSManagedObjectModel *firstModel = [self loadManagedObjectModel];
@@ -23,6 +25,7 @@
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc ]initWithManagedObjectModel:finalModel];
     NSError *error;
     NSString *storeType = NSSQLiteStoreType;
+    NSDictionary *options = (ubiquityStoreName.length > 0) ? @{NSPersistentStoreUbiquitousContentNameKey:ubiquityStoreName} : nil;
     
     if (![coordinator addPersistentStoreWithType:storeType
                                    configuration:nil
@@ -80,4 +83,58 @@
     return [[NSManagedObjectModel alloc] initWithContentsOfURL:bundleURL];
 }
 
+#pragma mark - iCloud
+- (void)registerForiCloudNotifications
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+	
+    [notificationCenter addObserver:self
+                           selector:@selector(storesWillChange:)
+                               name:NSPersistentStoreCoordinatorStoresWillChangeNotification
+                             object:self.persistentStoreCoordinator];
+    
+    [notificationCenter addObserver:self
+                           selector:@selector(storesDidChange:)
+                               name:NSPersistentStoreCoordinatorStoresDidChangeNotification
+                             object:self.persistentStoreCoordinator];
+    
+    [notificationCenter addObserver:self
+                           selector:@selector(persistentStoreDidImportUbiquitousContentChanges:)
+                               name:NSPersistentStoreDidImportUbiquitousContentChangesNotification
+                             object:self.persistentStoreCoordinator];
+}
+
+- (void)storesWillChange:(NSNotification *)notification
+{
+    [self performBlockAndWait:^{
+        NSError *error;
+        if ([self hasChanges]) {
+            BOOL success = [self save:&error];
+            if (!success && error) {
+                // perform error handling
+                NSLog(@"%@",[error localizedDescription]);
+            }
+        }
+        [self reset];
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:ContextNeedsUIUpdateNotification object:self];
+}
+
+- (void)storesDidChange:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:ContextNeedsUIUpdateNotification object:self];
+}
+
+- (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)notification
+{
+    [self performBlock:^{
+        [self mergeChangesFromContextDidSaveNotification:notification];
+    }];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

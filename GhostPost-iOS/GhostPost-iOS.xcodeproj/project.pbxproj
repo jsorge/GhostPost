@@ -104,6 +104,7 @@
 		9339792318EA508A00891457 /* JMSSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSSettingsTableViewController.m; sourceTree = "<group>"; };
 		9339792818EA509100891457 /* JMSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
 		9339792918EA509100891457 /* JMSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
+		9339792B18EC4C2400891457 /* GhostPost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GhostPost-iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +178,7 @@
 		933978BD18EA501F00891457 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9339792B18EC4C2400891457 /* GhostPost-iOS.entitlements */,
 				9339790018EA507D00891457 /* CocoaHoedown */,
 				9339790318EA507D00891457 /* hoedown */,
 				933978BE18EA501F00891457 /* GhostPost-iOS-Info.plist */,
@@ -317,6 +319,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = jsorge;
 				TargetAttributes = {
+					933978B218EA501F00891457 = {
+						DevelopmentTeam = 49LQXRW3X4;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 					933978D318EA501F00891457 = {
 						TestTargetID = 933978B218EA501F00891457;
 					};
@@ -504,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GhostPost-iOS/GhostPost-iOS.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";
@@ -517,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "GhostPost-iOS/GhostPost-iOS.entitlements";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";

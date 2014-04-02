@@ -28,9 +28,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Draft" id="yaw-7H-9X3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="UEf-ca-iqZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="UEf-ca-iqZ">
+                            <connections>
+                                <action selector="actionButtonTapped:" destination="jcG-ZP-XJg" id="Yz8-Au-TSn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionButton" destination="UEf-ca-iqZ" id="TFw-oI-1VU"/>
                         <outlet property="textView" destination="pQq-AV-rMm" id="mpN-Or-ZgN"/>
                         <segue destination="NDD-bE-rwE" kind="modal" identifier="seg_PreviewEntry" id="pPx-So-Nqw"/>
                     </connections>

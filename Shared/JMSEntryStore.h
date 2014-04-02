@@ -12,5 +12,6 @@
 
 #pragma mark - API
 + (NSURL *)storeURL;
++ (NSString *)ubiquityStoreName;
 
 @end

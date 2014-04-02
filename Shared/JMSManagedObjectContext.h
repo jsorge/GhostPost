@@ -8,10 +8,12 @@
 
 #import <CoreData/CoreData.h>
 
+extern NSString *const ContextNeedsUIUpdateNotification;
+
 @interface JMSManagedObjectContext : NSManagedObjectContext
 
 #pragma mark - API
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL options:(NSDictionary *)options;
++ (instancetype)createContextWithStoreURL:(NSURL *)storeURL ubiquityStoreName:(NSString *)ubiquityStoreName;
 + (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
 - (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator;
 
