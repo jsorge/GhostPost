@@ -15,6 +15,5 @@ extern NSString *const ContextNeedsUIUpdateNotification;
 #pragma mark - API
 + (instancetype)createContextWithStoreURL:(NSURL *)storeURL ubiquityStoreName:(NSString *)ubiquityStoreName;
 + (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
-- (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator;
 
 @end
