@@ -13,7 +13,23 @@ extern NSString *const ContextNeedsUIUpdateNotification;
 @interface JMSManagedObjectContext : NSManagedObjectContext
 
 #pragma mark - API
+/**
+ *  Creates a new managed object context for use on the main queue, setup for iCloud sync if the ubiquityStoreName is present.
+ *
+ *  @param storeURL          The location on disk where the store is to be kept.
+ *  @param ubiquityStoreName The name of the ubiquity store.
+ *
+ *  @return JMSManagedObjectContext
+ */
 + (instancetype)createContextWithStoreURL:(NSURL *)storeURL ubiquityStoreName:(NSString *)ubiquityStoreName;
+
+/**
+ *  Checks to see if the managed object model at the given URL matches what is in the app bundle's managed object model.
+ *
+ *  @param storeURL The location of the persistent store.
+ *
+ *  @return YES if migration needs to happen, NO if not.
+ */
 + (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL;
 
 @end
