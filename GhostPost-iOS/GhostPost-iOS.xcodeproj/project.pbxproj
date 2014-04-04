@@ -24,7 +24,7 @@
 		933978FB18EA504100891457 /* JMSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F318EA504100891457 /* JMSManagedObject.m */; };
 		933978FC18EA504100891457 /* JMSManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F518EA504100891457 /* JMSManagedObjectContext.m */; };
 		933978FD18EA504100891457 /* JMSSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933978F718EA504100891457 /* JMSSettingsController.m */; };
-		933978FF18EA506D00891457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933978FE18EA506D00891457 /* Main.storyboard */; };
+		933978FF18EA506D00891457 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933978FE18EA506D00891457 /* iPhone.storyboard */; };
 		9339791218EA507E00891457 /* JKSMarkdownDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339790218EA507D00891457 /* JKSMarkdownDocument.m */; };
 		9339791318EA507E00891457 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790418EA507D00891457 /* autolink.c */; };
 		9339791418EA507E00891457 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 9339790618EA507D00891457 /* buffer.c */; };
@@ -39,6 +39,7 @@
 		9339792618EA508A00891457 /* JMSEntryPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792118EA508A00891457 /* JMSEntryPreviewViewController.m */; };
 		9339792718EA508A00891457 /* JMSSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792318EA508A00891457 /* JMSSettingsTableViewController.m */; };
 		9339792A18EA509100891457 /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339792918EA509100891457 /* JMSAppDelegate.m */; };
+		9339792D18EE62AD00891457 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339792C18EE62AD00891457 /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		933978B318EA501F00891457 /* GhostPost-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GhostPost-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933978B318EA501F00891457 /* GhostPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		933978B618EA501F00891457 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		933978B818EA501F00891457 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		933978BA18EA501F00891457 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -77,7 +78,7 @@
 		933978F518EA504100891457 /* JMSManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSManagedObjectContext.m; sourceTree = "<group>"; };
 		933978F618EA504100891457 /* JMSSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSSettingsController.h; sourceTree = "<group>"; };
 		933978F718EA504100891457 /* JMSSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSSettingsController.m; sourceTree = "<group>"; };
-		933978FE18EA506D00891457 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		933978FE18EA506D00891457 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		9339790118EA507D00891457 /* JKSMarkdownDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSMarkdownDocument.h; sourceTree = "<group>"; };
 		9339790218EA507D00891457 /* JKSMarkdownDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSMarkdownDocument.m; sourceTree = "<group>"; };
 		9339790418EA507D00891457 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autolink.c; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		9339792818EA509100891457 /* JMSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
 		9339792918EA509100891457 /* JMSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
 		9339792B18EC4C2400891457 /* GhostPost-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "GhostPost-iOS.entitlements"; sourceTree = "<group>"; };
+		9339792C18EE62AD00891457 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = Images.xcassets/iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,7 @@
 		933978B418EA501F00891457 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				933978B318EA501F00891457 /* GhostPost-iOS.app */,
+				933978B318EA501F00891457 /* GhostPost.app */,
 				933978D418EA501F00891457 /* GhostPost-iOSTests.xctest */,
 			);
 			name = Products;
@@ -166,7 +168,8 @@
 			children = (
 				9339792818EA509100891457 /* JMSAppDelegate.h */,
 				9339792918EA509100891457 /* JMSAppDelegate.m */,
-				933978FE18EA506D00891457 /* Main.storyboard */,
+				933978FE18EA506D00891457 /* iPhone.storyboard */,
+				9339792C18EE62AD00891457 /* iPad.storyboard */,
 				9339791B18EA508A00891457 /* View Controllers */,
 				933978CE18EA501F00891457 /* Images.xcassets */,
 				933978EB18EA504100891457 /* Model */,
@@ -288,7 +291,7 @@
 			);
 			name = GhostPost;
 			productName = "GhostPost-iOS";
-			productReference = 933978B318EA501F00891457 /* GhostPost-iOS.app */;
+			productReference = 933978B318EA501F00891457 /* GhostPost.app */;
 			productType = "com.apple.product-type.application";
 		};
 		933978D318EA501F00891457 /* GhostPost-iOSTests */ = {
@@ -356,7 +359,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				933978FF18EA506D00891457 /* Main.storyboard in Resources */,
+				9339792D18EE62AD00891457 /* iPad.storyboard in Resources */,
+				933978FF18EA506D00891457 /* iPhone.storyboard in Resources */,
 				933978CF18EA501F00891457 /* Images.xcassets in Resources */,
 				933978C118EA501F00891457 /* InfoPlist.strings in Resources */,
 			);
@@ -520,8 +524,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -537,8 +543,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GhostPost-iOS/GhostPost-iOS-Prefix.pch";
 				INFOPLIST_FILE = "GhostPost-iOS/GhostPost-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
