@@ -31,6 +31,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 {
     [super viewDidLoad];
     
+    self.navigationController.title = @"Saved Drafts";
     [self registerForContextUpdates];
     
     self.tableView.delegate = self;
@@ -43,8 +44,9 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 {
     if ([segue.identifier isEqualToString:EditDraftSegueKey]) {
         JMSEditDraftViewController *destination = (JMSEditDraftViewController *)segue.destinationViewController;
+        self.delegate = destination;
         NSAssert([sender isKindOfClass:[JMSGhostEntry class]], @"Activating the %@ segue requires a new entry as the sender", EditDraftSegueKey);
-        destination.entry = sender;
+        [self.delegate entrySelected:sender];
     } else if ([segue.identifier isEqualToString:ShowSettingsSegueKey]) {
         JMSSettingsTableViewController *destination = (JMSSettingsTableViewController *)segue.destinationViewController;
         destination.delegate = self;
@@ -88,8 +90,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 
 - (IBAction)addButtonTapped:(id)sender
 {
-    JMSGhostEntry *newEntry = [JMSGhostEntry newInstanceInManagedObjectContext:self.context];
-    [self performSegueWithIdentifier:EditDraftSegueKey sender:newEntry];
+    [self beginEditingEntry:nil];
 }
 
 - (IBAction)actionButtonTapped:(id)sender
@@ -122,7 +123,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JMSGhostEntry *selectedEntry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [self performSegueWithIdentifier:EditDraftSegueKey sender:selectedEntry];
+    [self beginEditingEntry:selectedEntry];
 }
 
 #pragma mark - JMSGhostPostSettingsDelegate
@@ -152,10 +153,10 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
         case NSFetchedResultsChangeUpdate:
             [self.tableView reloadRowsAtIndexPaths:@[indexPath]
                                   withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
+//            break;
         case NSFetchedResultsChangeMove:
             [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
-            break;
+//            break;
         default:
             break;
     }
@@ -181,5 +182,18 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
     self.fetchedResultsController = nil;
     NSError *error;
     [self.fetchedResultsController performFetch:&error];
+}
+
+- (void)beginEditingEntry:(JMSGhostEntry *)entry
+{
+    if (!entry) {
+        entry = [JMSGhostEntry newInstanceInManagedObjectContext:self.context];
+    }
+    
+    [self.delegate entrySelected:entry];
+    
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        [self performSegueWithIdentifier:EditDraftSegueKey sender:nil];
+    }
 }
 @end

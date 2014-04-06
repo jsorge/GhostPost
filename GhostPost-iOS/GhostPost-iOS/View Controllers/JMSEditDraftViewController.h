@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMSEntryListViewController.h"
 @class JMSGhostEntry;
 
-@interface JMSEditDraftViewController : UIViewController
+@interface JMSEditDraftViewController : UIViewController <JMSEntryListDelegate>
 @property (strong, nonatomic)JMSGhostEntry *entry;
 @end

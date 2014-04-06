@@ -10,10 +10,11 @@
 #import "JMSGhostEntry.h"
 #import "JMSEntryPreviewViewController.h"
 
-@interface JMSEditDraftViewController () <UIActionSheetDelegate, JMSEntryPreviewDelegate>
+@interface JMSEditDraftViewController () <UIActionSheetDelegate, JMSEntryPreviewDelegate, UISplitViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic)UIToolbar *accessoryToolbar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ipad_draftsButton;
 @end
 
 static NSString *const PreviewSegue = @"seg_PreviewEntry";
@@ -30,7 +31,8 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.textView.text = self.entry.markdownText;
+    self.navigationController.title = @"Edit Draft";
+    self.textView.text = @"This is the text editor field.";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -91,5 +93,28 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)entryPreviewViewControllerDismissed:(JMSEntryPreviewViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UISplitViewControllerDelegate
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc;
+{
+    barButtonItem.title = @"Drafts";
+    NSMutableArray *newToolbar = [self.toolbarItems mutableCopy];
+    [newToolbar insertObject:barButtonItem atIndex:0];
+    self.toolbarItems = newToolbar;
+}
+
+- (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem;
+{
+    NSMutableArray *newToolbar = [self.toolbarItems mutableCopy];
+    [newToolbar removeObject:barButtonItem];
+    self.toolbarItems = newToolbar;
+}
+
+#pragma mark - JMSEntryListDelegate
+- (void)entrySelected:(JMSGhostEntry *)entry
+{
+    self.entry = entry;
+    self.textView.text = self.entry.markdownText;
 }
 @end

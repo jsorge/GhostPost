@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Edit Draft View Controller - Edit Draft-->
+        <!--Edit Draft View Controller-->
         <scene sceneID="3R6-KI-5sZ">
             <objects>
                 <viewController id="jcG-ZP-XJg" customClass="JMSEditDraftViewController" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Draft" id="yaw-7H-9X3">
+                    <navigationItem key="navigationItem" id="yaw-7H-9X3">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="UEf-ca-iqZ">
                             <connections>
                                 <action selector="actionButtonTapped:" destination="jcG-ZP-XJg" id="Yz8-Au-TSn"/>
@@ -191,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="2406" y="-249"/>
         </scene>
-        <!--Entry List View Controller - Saved Drafts-->
+        <!--Entry List View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="JMSEntryListViewController" sceneMemberID="viewController">
@@ -248,7 +248,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Saved Drafts" id="l6e-Za-9Nv">
+                    <navigationItem key="navigationItem" id="l6e-Za-9Nv">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="cd1-Yz-Wxz">
                             <connections>
                                 <action selector="addButtonTapped:" destination="vXZ-lx-hvc" id="S6S-mq-v62"/>

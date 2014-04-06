@@ -7,13 +7,24 @@
 //
 
 #import "JMSAppDelegate.h"
-#import "JMSManagedObjectContext.h"
-#import "JMSEntryStore.h"
+#import "JMSEntryListViewController.h"
+#import "JMSEditDraftViewController.h"
 
 @implementation JMSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UISplitViewController *splitView = (UISplitViewController *)self.window.rootViewController;
+        UINavigationController *masterNav = [splitView.viewControllers objectAtIndex:0];
+        UINavigationController *detailNav = [splitView.viewControllers objectAtIndex:1];
+        
+        JMSEntryListViewController *master = (JMSEntryListViewController *)masterNav.topViewController;
+        JMSEditDraftViewController *detail = (JMSEditDraftViewController *)detailNav.topViewController;
+        
+        master.delegate = detail;
+    }
+    
     return YES;
 }
 							

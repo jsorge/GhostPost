@@ -4,24 +4,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Entry Preview View Controller-->
+        <!--Edit Draft View Controller-->
         <scene sceneID="skG-we-BDP">
             <objects>
-                <viewController id="7Wo-HK-CTR" customClass="JMSEntryPreviewViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8CN-3Q-Jjz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fuh-mB-bSn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nQZ-X0-NVq">
+                <viewController id="7Wo-HK-CTR" customClass="JMSEditDraftViewController" sceneMemberID="viewController">
+                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="vP7-Iv-tYU">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bGH-68-T5T">
+                        <barButtonItem key="leftBarButtonItem" title="Drafts" id="lo5-Hr-n6r"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dZT-Wx-duJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionButton" destination="dZT-Wx-duJ" id="Evw-Ma-DVE"/>
+                        <outlet property="ipad_draftsButton" destination="lo5-Hr-n6r" id="Wg9-Rf-ZCT"/>
+                        <outlet property="textView" destination="vP7-Iv-tYU" id="ylw-qi-31e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFa-mU-JBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="275"/>
+            <point key="canvasLocation" x="1371" y="463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Ma-Ob-998">
@@ -51,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lAZ-CX-gcu">
-                                <rect key="frame" x="-1" y="1" width="320" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -81,13 +89,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyX-8u-axY">
+                                <rect key="frame" x="0.0" y="808" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Settings" id="bYe-kI-DGl">
+                                        <connections>
+                                            <action selector="settingsButtonTapped:" destination="4Ig-0v-zOw" id="bsW-qG-KcW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ciA-JC-ghz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="kHT-uM-1AZ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dZT-Wx-duJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kHT-uM-1AZ">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="4Ig-0v-zOw" id="Loc-Q6-jQd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="lAZ-CX-gcu" id="HyA-Mt-5H1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihG-Gn-5e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,12 +125,30 @@
                     <toolbarItems/>
                     <connections>
                         <segue destination="gdf-eN-vcG" kind="relationship" relationship="masterViewController" id="TOx-Mt-0MJ"/>
-                        <segue destination="7Wo-HK-CTR" kind="relationship" relationship="detailViewController" id="1s1-sS-GP7"/>
+                        <segue destination="sX7-SL-wDj" kind="relationship" relationship="detailViewController" id="1s1-sS-GP7"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTg-6v-R3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-657" y="-211"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uFf-aS-6cP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sX7-SL-wDj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zUb-J2-doj">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Wo-HK-CTR" kind="relationship" relationship="rootViewController" id="p2b-vz-ybD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvI-aT-cjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="275"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

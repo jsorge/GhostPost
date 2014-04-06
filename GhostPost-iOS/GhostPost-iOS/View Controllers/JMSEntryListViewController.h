@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JMSGhostEntry;
+
+@protocol JMSEntryListDelegate;
 
 @interface JMSEntryListViewController : UIViewController
+@property (weak, nonatomic)id<JMSEntryListDelegate>delegate;
+@end
 
+@protocol JMSEntryListDelegate <NSObject>
+- (void)entrySelected:(JMSGhostEntry *)entry;
 @end
