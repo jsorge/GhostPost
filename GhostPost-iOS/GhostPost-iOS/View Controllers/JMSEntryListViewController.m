@@ -31,7 +31,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 {
     [super viewDidLoad];
     
-    self.navigationController.title = @"Saved Drafts";
+    self.title = @"Saved Drafts";
     [self registerForContextUpdates];
     
     self.tableView.delegate = self;
@@ -135,12 +135,12 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
 #pragma mark - NSFetchedResultsControllerDelegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView beginUpdates];
+//    [self.tableView beginUpdates];
 }
 
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView endUpdates];
+//    [self.tableView endUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath

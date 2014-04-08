@@ -31,8 +31,8 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = @"Edit Draft";
-    self.textView.text = @"This is the text editor field.";
+    self.title = @"Edit Draft";
+    self.textView.text = self.entry.markdownText;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -48,8 +48,7 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.entry.markdownText = self.textView.text;
-    [self.entry.managedObjectContext save:nil];
+    [self saveEntryToDisk];
 }
 
 #pragma mark - Properties
@@ -114,7 +113,19 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 #pragma mark - JMSEntryListDelegate
 - (void)entrySelected:(JMSGhostEntry *)entry
 {
+    if (self.entry) {
+        [self saveEntryToDisk];
+    }
+    
     self.entry = entry;
     self.textView.text = self.entry.markdownText;
+}
+
+#pragma mark - Private
+- (void)saveEntryToDisk
+{
+    NSLog(@"saving entry");
+    self.entry.markdownText = self.textView.text;
+    [self.entry.managedObjectContext save:nil];
 }
 @end
