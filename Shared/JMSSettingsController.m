@@ -19,13 +19,13 @@ NSString *const serverURLKey = @"serverURL";
 
 + (NSString *)serverURL
 {
-    return [[NSUbiquitousKeyValueStore defaultStore] valueForKey:serverURLKey];
+    return [[NSUbiquitousKeyValueStore defaultStore] stringForKey:serverURLKey];
 }
 
 + (void)updateServerURL:(NSString *)url
 {
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
-    [store setObject:url forKey:serverURLKey];
+    [store setString:url forKey:serverURLKey];
     [store synchronize];
 }
 @end

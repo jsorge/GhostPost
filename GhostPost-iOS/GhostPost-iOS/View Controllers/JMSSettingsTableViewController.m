@@ -20,7 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    self.title = @"Settings";
+    self.serverURLTextField.text = [JMSSettingsController serverURL];
 }
 
 #pragma mark - IBActions
