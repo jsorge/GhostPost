@@ -18,16 +18,62 @@
                     </textView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bGH-68-T5T">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dZT-Wx-duJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dZT-Wx-duJ">
+                            <connections>
+                                <action selector="actionButtonTapped:" destination="7Wo-HK-CTR" id="p3o-So-azb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="actionButton" destination="dZT-Wx-duJ" id="Evw-Ma-DVE"/>
                         <outlet property="textView" destination="vP7-Iv-tYU" id="ylw-qi-31e"/>
+                        <segue destination="0hc-ix-AaR" kind="modal" identifier="seg_PreviewEntry" id="GIf-Wt-ACB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFa-mU-JBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1320" y="275"/>
+        </scene>
+        <!--Entry Preview View Controller-->
+        <scene sceneID="h1i-3O-IUU">
+            <objects>
+                <viewController id="mkM-1y-fyG" customClass="JMSEntryPreviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ABQ-GI-nTF"/>
+                        <viewControllerLayoutGuide type="bottom" id="GPX-eH-BrU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ziq-qW-AgW">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6e6-3M-b3R">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6e6-3M-b3R" secondAttribute="bottom" id="8dK-mw-mWG"/>
+                            <constraint firstItem="6e6-3M-b3R" firstAttribute="top" secondItem="Ziq-qW-AgW" secondAttribute="top" id="Dip-EC-bXl"/>
+                            <constraint firstItem="6e6-3M-b3R" firstAttribute="leading" secondItem="Ziq-qW-AgW" secondAttribute="leading" id="JjG-5F-CO6"/>
+                            <constraint firstAttribute="trailing" secondItem="6e6-3M-b3R" secondAttribute="trailing" id="vjp-TB-xqG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ep2-cM-kfu">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="ytU-CU-1T1">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="mkM-1y-fyG" id="qp2-5v-DvY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="htmlPreview" destination="6e6-3M-b3R" id="ulp-a6-B8q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbO-Tp-5UI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3278" y="283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Ma-Ob-998">
@@ -300,6 +346,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeJ-5O-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1300" y="-936"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pw4-v4-h1l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hc-ix-AaR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vkr-S7-Xw8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mkM-1y-fyG" kind="relationship" relationship="rootViewController" id="ED7-l0-ARK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjR-0b-9Lh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368" y="283"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
