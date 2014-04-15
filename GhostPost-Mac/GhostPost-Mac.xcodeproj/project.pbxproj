@@ -18,6 +18,8 @@
 		9325E2AF18ECA20100D076B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9325E28E18ECA20100D076B9 /* Cocoa.framework */; };
 		9325E2B718ECA20100D076B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9325E2B518ECA20100D076B9 /* InfoPlist.strings */; };
 		9325E2B918ECA20100D076B9 /* GhostPost_MacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325E2B818ECA20100D076B9 /* GhostPost_MacTests.m */; };
+		933979BA18F3829A00891457 /* JMSMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 933979B818F3829A00891457 /* JMSMainWindow.m */; };
+		933979BB18F3829A00891457 /* JMSMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933979B918F3829A00891457 /* JMSMainWindowController.xib */; };
 		9398B90A18ECA4830053216A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9325E29218ECA20100D076B9 /* CoreData.framework */; };
 		9398B91818ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9398B90C18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld */; };
 		9398B91918ECA52A0053216A /* JMSEntryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398B90F18ECA52A0053216A /* JMSEntryStore.m */; };
@@ -57,6 +59,9 @@
 		9325E2B418ECA20100D076B9 /* GhostPost-MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GhostPost-MacTests-Info.plist"; sourceTree = "<group>"; };
 		9325E2B618ECA20100D076B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9325E2B818ECA20100D076B9 /* GhostPost_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhostPost_MacTests.m; sourceTree = "<group>"; };
+		933979B718F3829A00891457 /* JMSMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSMainWindow.h; sourceTree = "<group>"; };
+		933979B818F3829A00891457 /* JMSMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSMainWindow.m; sourceTree = "<group>"; };
+		933979B918F3829A00891457 /* JMSMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMSMainWindowController.xib; sourceTree = "<group>"; };
 		9398B90D18ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GhostPostCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9398B90E18ECA52A0053216A /* JMSEntryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSEntryStore.h; path = ../../Shared/JMSEntryStore.h; sourceTree = "<group>"; };
 		9398B90F18ECA52A0053216A /* JMSEntryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSEntryStore.m; path = ../../Shared/JMSEntryStore.m; sourceTree = "<group>"; };
@@ -138,6 +143,9 @@
 				9325E2A018ECA20100D076B9 /* JMSAppDelegate.h */,
 				9325E2A118ECA20100D076B9 /* JMSAppDelegate.m */,
 				9325E2A318ECA20100D076B9 /* MainMenu.xib */,
+				933979B718F3829A00891457 /* JMSMainWindow.h */,
+				933979B818F3829A00891457 /* JMSMainWindow.m */,
+				933979B918F3829A00891457 /* JMSMainWindowController.xib */,
 				9325E2A618ECA20100D076B9 /* Images.xcassets */,
 				9398B90B18ECA5170053216A /* Model */,
 				9325E29518ECA20100D076B9 /* Supporting Files */,
@@ -281,6 +289,7 @@
 			files = (
 				9325E29918ECA20100D076B9 /* InfoPlist.strings in Resources */,
 				9325E2A718ECA20100D076B9 /* Images.xcassets in Resources */,
+				933979BB18F3829A00891457 /* JMSMainWindowController.xib in Resources */,
 				9325E29F18ECA20100D076B9 /* Credits.rtf in Resources */,
 				9325E2A518ECA20100D076B9 /* MainMenu.xib in Resources */,
 			);
@@ -306,6 +315,7 @@
 				9325E29B18ECA20100D076B9 /* main.m in Sources */,
 				9325E2A218ECA20100D076B9 /* JMSAppDelegate.m in Sources */,
 				9398B91818ECA52A0053216A /* GhostPostCoreDataModel.xcdatamodeld in Sources */,
+				933979BA18F3829A00891457 /* JMSMainWindow.m in Sources */,
 				9398B91B18ECA52A0053216A /* JMSManagedObject.m in Sources */,
 				9398B91918ECA52A0053216A /* JMSEntryStore.m in Sources */,
 				9398B91A18ECA52A0053216A /* JMSGhostEntry.m in Sources */,

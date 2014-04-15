@@ -10,19 +10,25 @@
 #import "JMSEntryListViewController.h"
 #import "JMSEditDraftViewController.h"
 
+typedef NS_ENUM(NSInteger, JMSMasterDetailViewControllerIndices){
+    MasterViewControllerIndex = 0,
+    DetailViewControllerIndex
+};
+
 @implementation JMSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitView = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *masterNav = [splitView.viewControllers objectAtIndex:0];
-        UINavigationController *detailNav = [splitView.viewControllers objectAtIndex:1];
+        UINavigationController *masterNav = splitView.viewControllers[MasterViewControllerIndex];
+        UINavigationController *detailNav = splitView.viewControllers[DetailViewControllerIndex];
         
         JMSEntryListViewController *master = (JMSEntryListViewController *)masterNav.topViewController;
         JMSEditDraftViewController *detail = (JMSEditDraftViewController *)detailNav.topViewController;
         
         master.delegate = detail;
+        splitView.delegate = detail;
     }
     
     return YES;

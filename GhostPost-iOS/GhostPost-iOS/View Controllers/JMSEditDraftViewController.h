@@ -10,6 +10,6 @@
 #import "JMSEntryListViewController.h"
 @class JMSGhostEntry;
 
-@interface JMSEditDraftViewController : UIViewController <JMSEntryListDelegate>
+@interface JMSEditDraftViewController : UIViewController <JMSEntryListDelegate, UISplitViewControllerDelegate>
 @property (strong, nonatomic)JMSGhostEntry *entry;
 @end

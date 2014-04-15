@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>31872C0B-5FD2-4045-9A92-EAB681DC0967</string>
+	<string>E6957DEF-09A6-4975-8ECE-54C29334C0C5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>GhostPost</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0B399740-18BC-4714-BC0B-A53D5CFCEA18</key>
+		<key>C9F80850-4576-4B49-B818-9196DC1022DF</key>
 		<string>https://github.com/jsorge/GhostPost.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GhostPost.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0B399740-18BC-4714-BC0B-A53D5CFCEA18</key>
+		<key>C9F80850-4576-4B49-B818-9196DC1022DF</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0B399740-18BC-4714-BC0B-A53D5CFCEA18</string>
+	<string>C9F80850-4576-4B49-B818-9196DC1022DF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0B399740-18BC-4714-BC0B-A53D5CFCEA18</string>
+			<string>C9F80850-4576-4B49-B818-9196DC1022DF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GhostPost</string>
 		</dict>

@@ -48,7 +48,8 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
         NSAssert([sender isKindOfClass:[JMSGhostEntry class]], @"Activating the %@ segue requires a new entry as the sender", EditDraftSegueKey);
         [self.delegate entrySelected:sender];
     } else if ([segue.identifier isEqualToString:ShowSettingsSegueKey]) {
-        JMSSettingsTableViewController *destination = (JMSSettingsTableViewController *)segue.destinationViewController;
+        UINavigationController *destNav = segue.destinationViewController;
+        JMSSettingsTableViewController *destination = (JMSSettingsTableViewController *)destNav.topViewController;
         destination.delegate = self;
     }
 }
@@ -193,7 +194,7 @@ static NSString *const ShowSettingsSegueKey = @"seg_ShowSettings";
     [self.delegate entrySelected:entry];
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-        [self performSegueWithIdentifier:EditDraftSegueKey sender:nil];
+        [self performSegueWithIdentifier:EditDraftSegueKey sender:entry];
     }
 }
 @end

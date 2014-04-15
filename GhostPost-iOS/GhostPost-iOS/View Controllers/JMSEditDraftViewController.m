@@ -10,11 +10,11 @@
 #import "JMSGhostEntry.h"
 #import "JMSEntryPreviewViewController.h"
 
-@interface JMSEditDraftViewController () <UIActionSheetDelegate, JMSEntryPreviewDelegate, UISplitViewControllerDelegate>
+@interface JMSEditDraftViewController () <UIActionSheetDelegate, JMSEntryPreviewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic)UIToolbar *accessoryToolbar;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *ipad_draftsButton;
+@property (strong, nonatomic)UIPopoverController *masterPopoverController;
 @end
 
 static NSString *const PreviewSegue = @"seg_PreviewEntry";
@@ -97,17 +97,15 @@ static NSString *const PreviewSegue = @"seg_PreviewEntry";
 #pragma mark - UISplitViewControllerDelegate
 - (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc;
 {
-    barButtonItem.title = @"Drafts";
-    NSMutableArray *newToolbar = [self.toolbarItems mutableCopy];
-    [newToolbar insertObject:barButtonItem atIndex:0];
-    self.toolbarItems = newToolbar;
+    barButtonItem.title = NSLocalizedString(@"Drafts", @"Drafts");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem];
+    self.masterPopoverController = pc;
 }
 
 - (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem;
 {
-    NSMutableArray *newToolbar = [self.toolbarItems mutableCopy];
-    [newToolbar removeObject:barButtonItem];
-    self.toolbarItems = newToolbar;
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
 }
 
 #pragma mark - JMSEntryListDelegate
